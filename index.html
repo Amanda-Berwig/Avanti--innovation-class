@@ -14,7 +14,7 @@
         rel="stylesheet">
 </head>
 
-<body style="font-family: 'Nunito Sans', sans-serif;" class="text-sm">
+<body style="font-family: 'Nunito Sans', sans-serif;" class="text-sm w-dvw">
     <header>
         <div>
             <p class="bg-[#005CFF] text-[#FFFFFF] font-bold px-5 py-1 text-center">Ganhe <span
@@ -32,15 +32,15 @@
                     alt="numero de compras" class="absolute -top-1.5 -right-1.5 w-4 h-4"></a>
         </div>
         <input type="text" placeholder="Digite aqui o que você procura"
-            class="border-2 border-gray-300 rounded-md bg-[url('/assets/lupa.svg')] bg-no-repeat bg-[length:20px] bg-[position:right_10px_center] placeholder-black font-bold py-2 pl-5 mt-9 mb-6 mx-4 w-5/6 w-full">
+            class="border-2 border-gray-300 rounded-md bg-[url('/assets/lupa.svg')] bg-no-repeat bg-[length:20px] bg-[position:right_10px_center] placeholder-black font-semibold py-2 pl-5 mt-9 mb-6 mx-4 w-[90%]">
 
-        <a href="#"><img src="/assets/usuario.svg" alt="usuario">
+        <a href="#" class="hidden"><img src="/assets/usuario.svg" alt="usuario">
             <p>Olá, <br>
                 Nome cliente!</p>
         </a>
     </header>
 
-    <div>
+    <div class="hidden">
         <input type="checkbox" id="menu" /> <label for="menu"></label>
 
         <ul>
@@ -57,14 +57,14 @@
         </ul>
     </div>
 
-    <main>
+    <main>c
         <!-- Section SALE -->
-        <section>
-            <img src="./assets/cadeira.svg" alt="imagem cadeira com roupas">
+        <section class="flex bg-[#E7E7EA] items-center">
+            <img src="./assets/cadeiracortada.svg" alt="imagem cadeira com roupas">
             <div>
-                <p>SUPER <span>SALE</span></p>
-                <p>ITENS SELECIONADOS COM ATÉ
-                    <br /><span>50%OFF</span>
+                <p class="text-[40px]">SUPER<span class="font-bold">SALE</span></p>
+                <p class="text-xs- text-[#005CFF] font-bold">ITENS SELECIONADOS COM ATÉ
+                    <br /><span class="text-[32px]">50%OFF</span>
                 </p>
             </div>
         </section>
