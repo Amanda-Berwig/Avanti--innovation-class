@@ -1,16 +1,10 @@
 module.exports = {
   theme: {
-    extend: {},
-  },
-  corePlugins: {
-    container: false,
-  },
-  plugins: [
-    function ({ addBase }) {
-      addBase({
-        "*": { boxSizing: "border-box", maxWidth: "100%" },
-        body: { overflowX: "hidden" },
-      });
+    extend: {
+      boxShadow: {
+        text: "2px 2px 4px rgba(0, 0, 0, 0.2)",
+      },
     },
-  ],
+  },
+  plugins: [],
 };
