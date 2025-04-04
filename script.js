@@ -28,7 +28,7 @@ const swiper = new Swiper(".swiper", {
     clickable: true,
   },
 
-  // Navigation arrows
+  // Navigation arrows disabled
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
