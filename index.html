@@ -220,100 +220,91 @@
                 </div>
         </section>
 
-        <section>
-            <img src="./assets/img-rodape.svg" alt="">
-            <p>
-                Entre em contato conosco e verifique a disponibilidade para sua região!
-            </p>
+        <section class="relative">
+            <img src="./assets/rodape.png" alt="">
+            <p class="bg-[#005CFF] text-[#FFFFFF] text-base font-semibold text-center px-1 py-4 absolute top-1/2 ">
+                Entre em contato conosco e verifique a disponibilidade para sua região! </p>
         </section>
     </main>
     <!-- Section newsletter -->
-    <section>
-        <h3>
-            Cadastre-se na nossa <span>newsletter</span>
+    <section class="my-12 mx-3">
+        <h3 class="text-base font-bold text-center">
+            Cadastre-se na nossa <span class="text-[#005CFF]">newsletter</span>
         </h3>
-        <form>
-            <input type="text" placeholder="Digite seu nome">
-            <input type="email" placeholder="Digite seu e-mail">
+        <form class="bg-[#F5F5F5] rounded-lg p-4 flex flex-col gap-4">
+            <input type="text" placeholder="Digite seu nome"
+                class="bg-[#FFFFFF] rounded-lg px-6 py-3 text-sm placeholder:text-[#303030] font-normal">
+            <input type="email" placeholder="Digite seu e-mail"
+                class="bg-[#FFFFFF] rounded-lg px-6 py-3 text-sm placeholder:text-[#303030] font-normal">
             <div>
                 <input type="checkbox" id="privacy">
-                <label for="privacy">Estou de acordo com a <span>Política de
+                <label for="privacy" class="text-xs">Estou de acordo com a <span class="font-bold">Política de
                         Privacidade</span></label>
             </div>
-            <button>
+            <button class=" bg-[#005CFF] text-[#FFFFFF] py-3 rounded-lg text-base font-bold">
                 Cadastrar
             </button>
         </form>
-        <footer>
-            <section>
-                <div>
-                    <img src="./assets/logo-avanti.svg" alt="">
-                    <ul>
-                        <li>
-                            <a href="#"><img src="./assets/logo-instagram.svg" alt="logo instagram"></a>
-                        </li>
-                        <li>
-                            <a href="#"><img src="./assets/logo-facebook.svg" alt="logo facebook"></a>
-                        </li>
-                        <li>
-                            <a href="#"><img src="./assets/logo-youtube.svg" alt="logo youtube"></a>
-                        </li>
-                        <li><a href="#"><img src="./assets/logo-tiktok.svg" alt=""></a></li>
-                    </ul>
-                </div>
-                <div>
-                    <ul>
-                        <li>
-                            <h5>Institucional</h5>
-                        </li>
-                        <li>
-                            <h5>Central de ajuda</h5>
-                        </li>
-                        <li>
-                            <h5">Atendimento</h5>
-                        </li>
-                    </ul>
-                </div>
-                <div>
-                    <img src="./assets/formas de pgto/amex.svg" alt="">
-                    <img src="./assets/formas de pgto/União 32.svg" alt="">
-                    <img src="./assets/formas de pgto/visa.svg" alt="">
-                    <img src="./assets/formas de pgto/hipercard.svg" alt="">
-                    <img src="./assets/formas de pgto/elo.svg" alt="">
-                    <img src="./assets/formas de pgto/b.svg" alt="">
-                    <img src="./assets/formas de pgto/paypal.svg" alt="">
-                    <img src="./assets/formas de pgto/União 39.svg" alt="">
-                    <img src="./assets/formas de pgto/boleto.svg" alt="">
-                </div>
-            </section>
-
-            <div>
-                <p>Lorem ipsum dolor sit amet, consectetuer
-                    adipiscing
-                    elit,
-                    sed diam
-                    nonummy
-                    nibh euismod tincidunt ut
-                    laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
-                    ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure
-                    dolor
-                    in
-                    hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at
-                    vero
-                    eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis
-                    dolore
-                    te
-                    feugait nulla facilisi.</p>
-                <ul>
-                    <li><img src="./assets/lets-encrypt.svg" alt=""></li>
-                    <li><img src="./assets/vtex-1.svg" alt=""></li>
-                    <li><img src="./assets/avanti.svg" alt=""></li>
-                    <li><img src="./assets/vtex.svg" alt=""></li>
+    </section>
+    <footer>
+        <section class="bg-[#F5F5F5] py-10">
+            <div class="flex flex-col items-center">
+                <img src="./assets/logo-avanti.svg" alt="">
+                <ul class="flex gap-10 my-10">
+                    <li>
+                        <a href="#"><img src="./assets/logo-instagram.svg" alt="logo instagram"></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./assets/logo-facebook.svg" alt="logo facebook"></a>
+                    </li>
+                    <li>
+                        <a href="#"><img src="./assets/logo-youtube.svg" alt="logo youtube"></a>
+                    </li>
+                    <li><a href="#"><img src="./assets/logo-tiktok.svg" alt=""></a></li>
                 </ul>
             </div>
-        </footer>
-        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-        <script src=script.js></script>
+            <div>
+                <ul>
+                    <li class="border border-[#DDDDDD] p-4">
+                        <h5 class="text-base font-bold">Institucional</h5>
+                    </li>
+                    <li class="border border-[#DDDDDD] p-4">
+                        <h5 class="text-base font-bold">Central de Ajuda</h5>
+                    </li>
+                    <li class="border border-[#DDDDDD] p-4">
+                        <h5 class="text-base font-bold">Atendimento</h5>
+                    </li>
+                </ul>
+            </div>
+            <div class="flex flex-wrap gap-8 py-10 justify-center">
+                <img src="./assets/formas de pgto/amex.svg" alt="">
+                <img src="./assets/formas de pgto/União 32.svg" alt="">
+                <img src="./assets/formas de pgto/visa.svg" alt="">
+                <img src="./assets/formas de pgto/hipercard.svg" alt="">
+                <img src="./assets/formas de pgto/elo.svg" alt="">
+                <img src="./assets/formas de pgto/b.svg" alt="">
+                <img src="./assets/formas de pgto/paypal.svg" alt="">
+                <img src="./assets/formas de pgto/União 39.svg" alt="">
+                <img src="./assets/formas de pgto/boleto.svg" alt="">
+            </div>
+        </section>
+
+        <div class="my-10 mx-4">
+            <p class="text-xs font-normal mb-10 text-center">Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+                sed diam
+                nonummy
+                nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
+                nostrud exerci.</p>
+            <ul class="flex flex-row gap-12">
+                <li><img src="./assets/lets-encrypt.svg" alt=""></li>
+                <li><img src="./assets/vtex-1.svg" alt=""></li>
+                <li><img src="./assets/avanti.svg" alt=""></li>
+                <li><img src="./assets/vtex.svg" alt=""></li>
+            </ul>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src=script.js></script>
     </section>
 </body>
 
