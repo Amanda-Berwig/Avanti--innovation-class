@@ -32,7 +32,7 @@
                     alt="numero de compras" class="absolute -top-1.5 -right-1.5 w-4 h-4"></a>
         </div>
         <input type="text" placeholder="Digite aqui o que você procura"
-            class="border-2 border-gray-300 rounded-md bg-[url('/assets/lupa.svg')] bg-no-repeat bg-[length:20px] bg-[position:right_10px_center] placeholder-black font-semibold py-2 pl-5 mt-9 mb-6 mx-4 w-[90%]">
+            class="border-2 border-[#DDDDDD] rounded-md bg-[url('/assets/lupa.svg')] bg-no-repeat bg-[length:20px] bg-[position:right_10px_center] placeholder-black font-semibold py-2 pl-5 mt-9 mb-6 mx-4 w-[90%]">
 
         <a href="#" class="hidden"><img src="/assets/usuario.svg" alt="usuario">
             <p>Olá, <br>
@@ -263,18 +263,53 @@
                     <li><a href="#"><img src="./assets/logo-tiktok.svg" alt=""></a></li>
                 </ul>
             </div>
-            <div>
-                <ul>
-                    <li class="border border-[#DDDDDD] p-4">
+            <div class="w-full max-w-md mx-auto text-[#303030]">
+                <!-- Item 1 -->
+                <div class="border border-[#DDDDDD]">
+                    <button
+                        class="accordion-header flex justify-between items-center w-full p-4 text-left text-lg font-bold">
                         <h5 class="text-base font-bold">Institucional</h5>
-                    </li>
-                    <li class="border border-[#DDDDDD] p-4">
-                        <h5 class="text-base font-bold">Central de Ajuda</h5>
-                    </li>
-                    <li class="border border-[#DDDDDD] p-4">
+                        <span class="arrow"><img src="./assets/arrow.png" alt=""></span>
+                    </button>
+                    <div class="accordion-content hidden p-4 space-y-2 text-xs">
+                        <h4 class="text-xs">Sobre nós</h4>
+                        <h4 class="text-xs">Nossas Lojas</h4>
+                        <h4 class="text-xs">Privacidade e Segurança</h4>
+                        <h4 class="text-xs">Termos e Condições</h4>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="border border-[#DDDDDD]">
+                    <button
+                        class="accordion-header flex justify-between items-center w-full p-4 text-left text-lg font-bold">
+                        <h5 class="text-base font-bold">Central de ajuda</h5>
+
+                        <span class="arrow"><img src="./assets/arrow.png" alt=""></span>
+                    </button>
+                    <div class="accordion-content hidden p-4 space-y-2 text-xs">
+                        <h4>Fale Conosco</h4>
+                        <h4>Frete e Entrega</h4>
+                        <h4>Trocas e Devoluções</h4>
+                        <h4>Formas de Pagamento</h4>
+                        <h4>FAQ</h4>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="border border-[#DDDDDD]">
+                    <button
+                        class="accordion-header flex justify-between items-center w-full p-4 text-left text-lg font-bold">
                         <h5 class="text-base font-bold">Atendimento</h5>
-                    </li>
-                </ul>
+                        <span class="arrow"><img src="./assets/arrow.png" alt=""></span>
+                    </button>
+                    <div class="accordion-content hidden p-4 space-y-2 text-xs">
+                        <h4><span class="font-bold">Telefone:</span>(00) 1234-5678 </h4>
+                        <h4><span class="font-bold"> E-mail:</span> exemplo@exemplo.com.br</h4>
+                        <h4><span class="font-bold">Horário de atendimento:</span></h4>
+                        <p> Segunda a Sábado: 07h00 às 23h00 <br /> Domingos e Feriados: 07h00 às 21h0</p>
+                    </div>
+                </div>
             </div>
             <div class="flex flex-wrap gap-8 py-10 justify-center">
                 <img src="./assets/formas de pgto/amex.svg" alt="">
@@ -302,6 +337,9 @@
                 <li><img src="./assets/vtex.svg" alt=""></li>
             </ul>
         </div>
+
+
+
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src=script.js></script>

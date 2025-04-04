@@ -34,3 +34,13 @@ const swiper = new Swiper(".swiper", {
     prevEl: ".swiper-button-prev",
   },
 });
+
+document.querySelectorAll(".accordion-header").forEach((button) => {
+  button.addEventListener("click", () => {
+    const content = button.nextElementSibling;
+    const arrow = button.querySelector(".arrow");
+
+    content.classList.toggle("hidden");
+    arrow.classList.toggle("rotate-180");
+  });
+});
