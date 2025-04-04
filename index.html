@@ -281,9 +281,11 @@
                         libero commodo egestas efficitur id augue.</p>
                 </div>
         </section>
-        <section class="relative">
-            <img src="./assets/rodape.png" alt="">
-            <p class="bg-[#005CFF] text-[#FFFFFF] text-base font-semibold text-center px-1 py-4 absolute top-1/2 ">
+
+        <section class="relative sm:max-h-[660px]">
+            <img src="./assets/rodape.png" alt="" class="w-full sm:h-[660px] object-cover">
+            <p
+                class="bg-[#005CFF] text-[#FFFFFF] text-base font-semibold text-center px-1 py-4 absolute top-1/2 w-full">
                 Entre em contato conosco e verifique a disponibilidade para sua região! </p>
         </section>
     </main>
@@ -292,17 +294,18 @@
         <h3 class="text-base font-bold text-center">
             Cadastre-se na nossa <span class="text-[#005CFF]">newsletter</span>
         </h3>
-        <form class="bg-[#F5F5F5] rounded-lg p-4 flex flex-col gap-4">
+        <form
+            class="bg-[#F5F5F5] rounded-lg p-4 flex flex-col gap-4 lg:flex-row lg:py-16 lg:items-center lg:justify-center">
             <input type="text" placeholder="Digite seu nome"
-                class="bg-[#FFFFFF] rounded-lg px-6 py-3 text-sm placeholder:text-[#303030] font-normal">
+                class="bg-[#FFFFFF] rounded-lg px-6 py-3 text-sm placeholder:text-[#303030] font-normal lg:w-64">
             <input type="email" placeholder="Digite seu e-mail"
-                class="bg-[#FFFFFF] rounded-lg px-6 py-3 text-sm placeholder:text-[#303030] font-normal">
+                class="bg-[#FFFFFF] rounded-lg px-6 py-3 text-sm placeholder:text-[#303030] font-normal lg:w-64">
             <div>
                 <input type="checkbox" id="privacy">
                 <label for="privacy" class="text-xs">Estou de acordo com a <span class="font-bold">Política de
                         Privacidade</span></label>
             </div>
-            <button class=" bg-[#005CFF] text-[#FFFFFF] py-3 rounded-lg text-base font-bold">
+            <button class=" bg-[#005CFF] text-[#FFFFFF] py-3 rounded-lg text-base font-bold lg:px-6">
                 Cadastrar
             </button>
         </form>
