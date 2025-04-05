@@ -53,7 +53,7 @@
     </header>
 
     <!-- MENU NAV -->
-    <nav class="relative shadow p-4 flex items-center gap-6 bg-white z-20 ">
+    <nav class="hidden relative shadow p-4 lg:flex items-center gap-6 bg-white z-20 ">
         <button id="toggleMenu" class="text-[#000000] font-bold flex items-center gap-2">
             <img src="./assets/menu.svg" alt="menu hamburguer">
             Todas as Categorias
@@ -65,11 +65,11 @@
         <a href="#" class="text-sm">Departamento</a>
         <a href="#" class="text-sm">Departamento</a>
         <a href="#" class="text-sm">Departamento</a>
-        <a href="#" class="text-sm">Departamento</a>
+
     </nav>
 
     <!-- MENU DE CATEGORIAS (inicia oculto) -->
-    <div id="menuCategorias" class="hidden bg-[#FFFFFF] absolute p-4 w-full z-10 shadow-lg h-96">
+    <div id="menuCategorias" class="hidden bg-[#FFFFFF] absolute p-4 w-full z-10 shadow-lg h-80">
         <div class="flex">
             <!-- COLUNA DEPARTAMENTOS -->
             <ul class="w-48 border-r pr-4 relative">
@@ -441,16 +441,26 @@
                     </div>
 
                 </li>
-
             </ul>
         </div>
+        <div class="absolute right-12 top-0 mt-4 w-60 h-72">
+            <!-- Imagem -->
+            <img src="./assets/segundo-banner.png" alt="Banner" class="w-full h-full rounded-lg object-cover">
+
+            <!-- Texto sobre a imagem -->
+            <p class="absolute top-10 left-4 text-white text-2xl font-semibold leading-tight">
+                Confira os<br>
+                Produtos<br>
+                Que <br>
+                acabaram <br>
+                De chegar
+            </p>
+            <button
+                class="absolute top-60 left-4 border border-[#FFFFFF] text-[#FFFFFF] p-2 rounded-lg hover:text-[#005CFF] hover:border-[#005CFF] ">VER
+                TODOS</button>
+        </div>
+
     </div>
-
-
-
-
-
-
     <main>
         <!-- Section SALE -->
         <section class="flex bg-[#e8e9eb] items-center justify-center overflow-hidden mb-14 lg:gap-6">
@@ -624,7 +634,7 @@
         <!-- SECTION BANNER -->
         <section
             class="flex flex-col bg-[#DEDEDE] px-5 py-7 text-[#000000] mb-14 lg:flew-row lg:flex-row-reverse lg:px-20 lg:items-center lg:gap-11">
-            <img src="./assets/segundo banner.svg" alt="" class="w-full lg:w-1/2">
+            <img src="./assets/segundo-banner.png" alt="" class="w-full lg:w-1/2">
             <div class="lg:w-1/2">
                 <h4 class="text-xl font-bold text-center my-5 lg:text-3xl">LOREM IPSUM</h4>
                 <div class="flex flex-col gap-5">
