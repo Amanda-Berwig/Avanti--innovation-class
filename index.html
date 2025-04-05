@@ -22,22 +22,27 @@
                 desconto no seu primeiro pedido. Utilize o cupom <span class="font-normal">DESCONTO10</span>
             </p>
         </div>
-        <div class="flex mx-4 mt-5 gap-16 justify-center">
-            <button class="lg:hidden">
-                <img src="./assets/menu.svg" alt="Menu">
-            </button>
-            <img src="./assets/logo-avanti.svg" alt="logo-avanti">
-            <a href="#" class="relative inline-block">
-                <img src="/assets/sacola.svg" alt="carrinho"><img src="./assets/compras-sacola.svg"
+        <div class="lg:flex flex-row lg:items-center lg:justify-between lg:px-12">
+            <div class="flex mx-4 mt-5 gap-16 justify-center">
+                <button class="lg:hidden">
+                    <img src="./assets/menu.svg" alt="Menu">
+                </button>
+                <img src="./assets/logo-avanti.svg" alt="logo-avanti">
+                <a href="#" class="relative inline-block lg:hidden">
+                    <img src="/assets/sacola.svg" alt="sacola compras"><img src="./assets/compras-sacola.svg"
+                        alt="numero de compras" class="absolute -top-1.5 -right-1.5 w-4 h-4"></a>
+            </div>
+            <input type="text" placeholder="Digite aqui o que você procura"
+                class="border-2 border-[#DDDDDD] rounded-md bg-[url('/assets/lupa.svg')] bg-no-repeat bg-[length:20px] bg-[position:right_10px_center] placeholder-black font-semibold py-2 pl-5 mt-9 mb-6 mx-4 w-[90%] lg:max-w-96 lg:mx-0">
+
+            <a href="#" class="hidden lg:flex lg:gap-1 items-center"><img src="/assets/usuario.svg" alt="usuario">
+                <p class="leading-none">Olá, <br>
+                    Nome cliente!</p>
+            </a>
+            <a href="#" class="relative hidden lg:inline-block">
+                <img src="/assets/sacola.svg" alt="sacola compras"><img src="./assets/compras-sacola.svg"
                     alt="numero de compras" class="absolute -top-1.5 -right-1.5 w-4 h-4"></a>
         </div>
-        <input type="text" placeholder="Digite aqui o que você procura"
-            class="border-2 border-[#DDDDDD] rounded-md bg-[url('/assets/lupa.svg')] bg-no-repeat bg-[length:20px] bg-[position:right_10px_center] placeholder-black font-semibold py-2 pl-5 mt-9 mb-6 mx-4 w-[90%]">
-
-        <a href="#" class="hidden lg:block"><img src="/assets/usuario.svg" alt="usuario">
-            <p>Olá, <br>
-                Nome cliente!</p>
-        </a>
     </header>
 
     <div class="hidden">
