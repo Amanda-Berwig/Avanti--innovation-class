@@ -1,8 +1,7 @@
 const swiper = new Swiper(".swiper", {
   direction: "horizontal",
   loop: true,
-  slidesPerView: 5,
-  spaceBetween: 20,
+
   breakpoints: {
     320: {
       slidesPerView: 2,
@@ -28,7 +27,7 @@ const swiper = new Swiper(".swiper", {
     clickable: true,
   },
 
-  // Navigation arrows disabled
+  // Navigation arrows
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
