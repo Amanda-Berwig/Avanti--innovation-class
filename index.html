@@ -194,7 +194,7 @@
             </div>
         </section>
         <!--SECTION PRODUTO DESTAQUE-->
-        <section class="flex flex-col lg:flex-row lg:items-center lg:px-20">
+        <section class="flex flex-col lg:flex-row lg:items-center lg:px-20 lg:mb-10">
             <div class="bg-[#C2C2C2] lg:w-1/2 lg:h-auto">
                 <img src="./assets/xicara.png" alt="imagem xicara com o logo avanti"
                     class="w-full mt-14 lg:mt-0 lg:h-full lg:object-cover">
@@ -258,7 +258,7 @@
                 </div>
             </div>
         </section>
-        <section class="flex flex-col lg:flex-row lg:items-center lg:px-20">
+        <section class="flex flex-col lg:flex-row lg:items-center lg:px-20  lg:mb-10">
             <div class="bg-[#C2C2C2] lg:w-1/2 lg:h-auto">
                 <img src="./assets/xicara.png" alt="imagem xicara com o logo avanti"
                     class="w-full mt-14 lg:mt-0 lg:h-full lg:object-cover">
@@ -297,8 +297,8 @@
         </section>
     </main>
     <!-- Section newsletter -->
-    <section class="my-12 mx-3">
-        <h3 class="text-base font-bold text-center">
+    <section class="my-12 mx-3 lg:mx-10">
+        <h3 class="text-base font-bold text-center lg:mb-2">
             Cadastre-se na nossa <span class="text-[#005CFF]">newsletter</span>
         </h3>
         <form
@@ -319,66 +319,69 @@
     </section>
     <footer>
         <section class="bg-[#F5F5F5] py-10">
-            <div class="flex flex-col items-center">
-                <img src="./assets/logo-avanti.svg" alt="">
-                <ul class="flex gap-10 my-10">
-                    <li>
-                        <a href="#"><img src="./assets/logo-instagram.svg" alt="logo instagram"></a>
-                    </li>
-                    <li>
-                        <a href="#"><img src="./assets/logo-facebook.svg" alt="logo facebook"></a>
-                    </li>
-                    <li>
-                        <a href="#"><img src="./assets/logo-youtube.svg" alt="logo youtube"></a>
-                    </li>
-                    <li><a href="#"><img src="./assets/logo-tiktok.svg" alt=""></a></li>
-                </ul>
-            </div>
-            <div class="w-full max-w-md mx-auto text-[#303030]">
-                <!-- Item 1 -->
-                <div class="border border-[#DDDDDD]">
-                    <button
-                        class="accordion-header flex justify-between items-center w-full p-4 text-left text-lg font-bold">
-                        <h5 class="text-base font-bold">Institucional</h5>
-                        <span class="arrow"><img src="./assets/arrow.png" alt=""></span>
-                    </button>
-                    <div class="accordion-content hidden p-4 space-y-2 text-xs">
-                        <h4 class="text-xs">Sobre nós</h4>
-                        <h4 class="text-xs">Nossas Lojas</h4>
-                        <h4 class="text-xs">Privacidade e Segurança</h4>
-                        <h4 class="text-xs">Termos e Condições</h4>
-                    </div>
+            <div class="flex flex-col lg:flex-row lg:px-20 lg:items-center lg:justify-center">
+                <div class="flex flex-col items-center">
+                    <img src="./assets/logo-avanti.svg" alt="">
+                    <ul class="flex gap-10 my-10">
+                        <li>
+                            <a href="#"><img src="./assets/logo-instagram.svg" alt="logo instagram"></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="./assets/logo-facebook.svg" alt="logo facebook"></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="./assets/logo-youtube.svg" alt="logo youtube"></a>
+                        </li>
+                        <li><a href="#"><img src="./assets/logo-tiktok.svg" alt=""></a></li>
+                    </ul>
                 </div>
-
-                <!-- Item 2 -->
-                <div class="border border-[#DDDDDD]">
-                    <button
-                        class="accordion-header flex justify-between items-center w-full p-4 text-left text-lg font-bold">
-                        <h5 class="text-base font-bold">Central de ajuda</h5>
-
-                        <span class="arrow"><img src="./assets/arrow.png" alt=""></span>
-                    </button>
-                    <div class="accordion-content hidden p-4 space-y-2 text-xs">
-                        <h4>Fale Conosco</h4>
-                        <h4>Frete e Entrega</h4>
-                        <h4>Trocas e Devoluções</h4>
-                        <h4>Formas de Pagamento</h4>
-                        <h4>FAQ</h4>
+                <div
+                    class="flex flex-col w-full max-w-md mx-auto text-[#303030] lg:flex-row lg:gap-14 lg:justify-center lg:max-w-full">
+                    <!-- Item 1 -->
+                    <div class="border border-[#DDDDDD] lg:border-0">
+                        <button
+                            class="accordion-header flex justify-between items-center w-full p-4 text-left text-lg font-bold">
+                            <h5 class="text-base font-bold lg:text-sm">Institucional</h5>
+                            <span class="arrow lg:hidden"><img src="./assets/arrow.png" alt=""></span>
+                        </button>
+                        <div class="accordion-content hidden p-4 space-y-2 text-xs lg:block lg:pt-0">
+                            <h4 class="text-xs">Sobre nós</h4>
+                            <h4 class="text-xs">Nossas Lojas</h4>
+                            <h4 class="text-xs">Privacidade e Segurança</h4>
+                            <h4 class="text-xs">Termos e Condições</h4>
+                        </div>
                     </div>
-                </div>
 
-                <!-- Item 3 -->
-                <div class="border border-[#DDDDDD]">
-                    <button
-                        class="accordion-header flex justify-between items-center w-full p-4 text-left text-lg font-bold">
-                        <h5 class="text-base font-bold">Atendimento</h5>
-                        <span class="arrow"><img src="./assets/arrow.png" alt=""></span>
-                    </button>
-                    <div class="accordion-content hidden p-4 space-y-2 text-xs">
-                        <h4><span class="font-bold">Telefone:</span>(00) 1234-5678 </h4>
-                        <h4><span class="font-bold"> E-mail:</span> exemplo@exemplo.com.br</h4>
-                        <h4><span class="font-bold">Horário de atendimento:</span></h4>
-                        <p> Segunda a Sábado: 07h00 às 23h00 <br /> Domingos e Feriados: 07h00 às 21h0</p>
+                    <!-- Item 2 -->
+                    <div class="border border-[#DDDDDD] lg:border-0">
+                        <button
+                            class="accordion-header flex justify-between items-center w-full p-4 text-left text-lg font-bold">
+                            <h5 class="text-base font-bold lg:text-sm">Central de ajuda</h5>
+
+                            <span class="arrow lg:hidden"><img src="./assets/arrow.png" alt=""></span>
+                        </button>
+                        <div class="accordion-content hidden p-4 space-y-2 text-xs lg:block lg:pt-0">
+                            <h4>Fale Conosco</h4>
+                            <h4>Frete e Entrega</h4>
+                            <h4>Trocas e Devoluções</h4>
+                            <h4>Formas de Pagamento</h4>
+                            <h4>FAQ</h4>
+                        </div>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="border border-[#DDDDDD] lg:border-0">
+                        <button
+                            class="accordion-header flex justify-between items-center w-full p-4 text-left text-lg font-bold">
+                            <h5 class="text-base font-bold  lg:text-sm">Atendimento</h5>
+                            <span class="arrow lg:hidden"><img src="./assets/arrow.png" alt=""></span>
+                        </button>
+                        <div class="accordion-content hidden p-4 space-y-2 text-xs lg:block lg:pt-0">
+                            <h4><span class="font-bold">Telefone:</span>(00) 1234-5678 </h4>
+                            <h4><span class="font-bold"> E-mail:</span> exemplo@exemplo.com.br</h4>
+                            <h4><span class="font-bold">Horário de atendimento:</span></h4>
+                            <p> Segunda a Sábado: 07h00 às 23h00 <br /> Domingos e Feriados: 07h00 às 21h0</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -393,8 +396,9 @@
                 <img src="./assets/formas de pgto/União 39.svg" alt="">
                 <img src="./assets/formas de pgto/boleto.svg" alt="">
             </div>
-            <div class="py-10 px-4 min-h-[100dvh]">
-                <p class="text-xs font-normal mb-10 text-center">Lorem ipsum dolor sit amet, consectetuer adipiscing
+            <div class="py-10 px-4 min-h-[100dvh] bg-[#FFFFFF]">
+                <p class="text-xs font-normal mb-10 text-center lg:px-36">Lorem ipsum dolor sit amet, consectetuer
+                    adipiscing
                     elit,
                     sed diam
                     nonummy
