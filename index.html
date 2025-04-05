@@ -23,7 +23,7 @@
             </p>
         </div>
         <div class="flex mx-4 mt-5 gap-16 justify-center">
-            <button>
+            <button class="lg:hidden">
                 <img src="./assets/menu.svg" alt="Menu">
             </button>
             <img src="./assets/logo-avanti.svg" alt="logo-avanti">
@@ -34,7 +34,7 @@
         <input type="text" placeholder="Digite aqui o que você procura"
             class="border-2 border-[#DDDDDD] rounded-md bg-[url('/assets/lupa.svg')] bg-no-repeat bg-[length:20px] bg-[position:right_10px_center] placeholder-black font-semibold py-2 pl-5 mt-9 mb-6 mx-4 w-[90%]">
 
-        <a href="#" class="hidden"><img src="/assets/usuario.svg" alt="usuario">
+        <a href="#" class="hidden lg:block"><img src="/assets/usuario.svg" alt="usuario">
             <p>Olá, <br>
                 Nome cliente!</p>
         </a>
@@ -59,17 +59,17 @@
 
     <main>
         <!-- Section SALE -->
-        <section class="flex bg-[#e8e9eb] items-center justify-center overflow-hidden mb-14">
+        <section class="flex bg-[#e8e9eb] items-center justify-center overflow-hidden mb-14 lg:gap-6">
             <img src="./assets/cadeira.png" alt="cadeira com roupas"
-                class="w-56 h-72 object-cover scale-150 -translate-x-14 -translate-y-10">
+                class="w-56 h-72 object-cover scale-150 lg:scale-[1.75] -translate-x-14 -translate-y-10 ">
             <div class="flex flex-col my-16 text-center gap-3">
-                <p class="text-4xl sm:text-5xl">
+                <p class="text-4xl sm:text-5xl lg:text-6xl">
                     <span class="block font-bold sm:inline">SUPER</span> <span>SALE</span>
                 </p>
                 <p style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);"
-                    class="text-xs text-[#005CFF] font-bold sm:text-sm">ITENS
+                    class="text-xs text-[#005CFF] font-bold sm:text-sm lg:tracking-[0.3rem]">ITENS
                     SELECIONADOS COM ATÉ
-                    <br /><span class="text-3xl sm:text-4xl">50%OFF</span>
+                    <br /><span class="text-3xl sm:text-4xl lg:text-5xl">50%OFF</span>
                 </p>
             </div>
         </section>
