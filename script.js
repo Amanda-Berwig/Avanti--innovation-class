@@ -43,3 +43,21 @@ document.querySelectorAll(".accordion-header").forEach((button) => {
     arrow.classList.toggle("rotate-180");
   });
 });
+
+////
+
+const toggleBtn = document.getElementById("toggleMenu");
+const menuCategorias = document.getElementById("menuCategorias");
+
+toggleBtn.addEventListener("click", () => {
+  menuCategorias.classList.toggle("hidden");
+});
+
+// Fechar o menu se clicar fora dele
+document.addEventListener("click", (e) => {
+  const isClickInside =
+    toggleBtn.contains(e.target) || menuCategorias.contains(e.target);
+  if (!isClickInside) {
+    menuCategorias.classList.add("hidden");
+  }
+});
