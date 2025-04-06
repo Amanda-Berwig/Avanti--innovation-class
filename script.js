@@ -61,3 +61,40 @@ document.addEventListener("click", (e) => {
     menuCategorias.classList.add("hidden");
   }
 });
+
+///// funcionalidade busca
+function buscar() {
+  const termoBusca = document
+    .getElementById("campoBusca")
+    .value.trim()
+    .toLowerCase();
+  const resultado = document.getElementById("resultadoBusca");
+  const slides = document.querySelectorAll(".swiper-slide");
+
+  if (termoBusca === "") {
+    resultado.textContent = "Digite algo para buscar.";
+    slides.forEach((slide) => (slide.style.display = "block"));
+    swiper.update();
+    return;
+  }
+
+  resultado.textContent = `Você buscou por: '${termoBusca}'`;
+
+  let encontrou = false;
+
+  slides.forEach((slide) => {
+    const nome = slide.dataset.nome.toLowerCase();
+    if (nome.includes(termoBusca)) {
+      slide.style.display = "block";
+      encontrou = true;
+    } else {
+      slide.style.display = "none";
+    }
+  });
+
+  if (!encontrou) {
+    resultado.textContent += " (Nenhum produto encontrado)";
+  }
+
+  swiper.update(); // atualiza o swiper com os itens visíveis
+}

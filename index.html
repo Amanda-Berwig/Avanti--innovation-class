@@ -39,8 +39,17 @@
                     <img src="/assets/sacola.svg" alt="sacola compras"><img src="./assets/compras-sacola.svg"
                         alt="numero de compras" class="absolute -top-1.5 -right-1.5 w-4 h-4"></a>
             </div>
-            <input type="text" placeholder="Digite aqui o que você procura"
-                class="border-2 border-[#DDDDDD] rounded-md bg-[url('/assets/lupa.svg')] bg-no-repeat bg-[length:20px] bg-[position:right_10px_center] placeholder-black font-semibold py-2 pl-5 mt-9 mb-6 mx-4 w-[90%] lg:max-w-96 lg:mx-0">
+
+            <div class="relative w-[90%] lg:max-w-96 mx-4 lg:mx-0 mt-9 mb-6">
+                <input type="search" id="campoBusca" placeholder="Digite aqui o que você procura"
+                    class="border-2 border-[#DDDDDD] rounded-md placeholder-black font-semibold py-2 pl-5 pr-10 w-full" />
+
+                <button onclick="buscar()" class="absolute right-3 top-1/2 transform -translate-y-1/2">
+                    <img src="/assets/lupa.svg" alt="Buscar" class="w-5 h-5" />
+                </button>
+            </div>
+            <!-- Resultado da busca -->
+            <p id="resultadoBusca" class="text-lg text-gray-700 font-medium mx-4 lg:mx-0"></p>
 
             <a href="#" class="hidden lg:flex lg:gap-1 items-center"><img src="/assets/usuario.svg" alt="usuario">
                 <p class="leading-none">Olá, <br>
@@ -489,7 +498,8 @@
             <div class="swiper">
                 <div class="swiper-wrapper">
                     <!-- Slides -->
-                    <div class="swiper-slide max-w-44 text-[#303030] border-2 border-[#E7E7EA] rounded-lg p-2 relative">
+                    <div class="swiper-slide max-w-44 text-[#303030] border-2 border-[#E7E7EA] rounded-lg p-2 relative"
+                        data-nome="Camisa Branca">
                         <span
                             class="text-xs text-[#FFFFFF] bg-[#00264E] rounded-md p-1 absolute top-1 left-1">NOVO</span>
                         <img src="./assets/anuncio.svg" alt="produto">
@@ -505,7 +515,8 @@
                         <button
                             class="bg-[#005CFF] text-[#FFFFFF] py-2 px-6 rounded-lg text-sm w-full my-2">Comprar</button>
                     </div>
-                    <div class="swiper-slide max-w-44 text-[#303030] border-2 border-[#E7E7EA] rounded-lg p-2 relative">
+                    <div class="swiper-slide max-w-44 text-[#303030] border-2 border-[#E7E7EA] rounded-lg p-2 relative"
+                        data-nome="Camisa Branca">
                         <span
                             class="text-xs text-[#FFFFFF] bg-[#00264E] rounded-md p-1 absolute top-1 left-1">NOVO</span>
                         <img src="./assets/anuncio.svg" alt="produto">
@@ -521,7 +532,8 @@
                         <button
                             class="bg-[#005CFF] text-[#FFFFFF] py-2 px-6 rounded-lg text-sm w-full my-2">Comprar</button>
                     </div>
-                    <div class="swiper-slide max-w-44 text-[#303030] border-2 border-[#E7E7EA] rounded-lg p-2 relative">
+                    <div class="swiper-slide max-w-44 text-[#303030] border-2 border-[#E7E7EA] rounded-lg p-2 relative"
+                        data-nome="Camisa Branca">
                         <span
                             class="text-xs text-[#FFFFFF] bg-[#00264E] rounded-md p-1 absolute top-1 left-1">NOVO</span>
                         <img src="./assets/anuncio.svg" alt="produto">
@@ -537,10 +549,11 @@
                         <button class="bg-[#005CFF] text-[#FFFFFF] py-2 px-6 rounded-lg text-sm w-full my-2">Comprar
                         </button>
                     </div>
-                    <div class="swiper-slide max-w-44 text-[#303030] border-2 border-[#E7E7EA] rounded-lg p-2 relative">
+                    <div class="swiper-slide max-w-44 text-[#303030] border-2 border-[#E7E7EA] rounded-lg p-2 relative"
+                        data-nome="Camisa Preta">
                         <span
                             class="text-xs text-[#FFFFFF] bg-[#00264E] rounded-md p-1 absolute top-1 left-1">NOVO</span>
-                        <img src="./assets/anuncio.svg" alt="produto">
+                        <img src="./assets/anuncio-camisa-preta.png" alt="produto">
                         <h3 class="my-2">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h3>
                         <div class="flex items-center gap-3 ">
                             <p class="line-through"> R$ 100,00</p>
@@ -553,10 +566,11 @@
                         <button
                             class="bg-[#005CFF] text-[#FFFFFF] py-2 px-6 rounded-lg text-sm w-full my-2">Comprar</button>
                     </div>
-                    <div class="swiper-slide max-w-44 text-[#303030] border-2 border-[#E7E7EA] rounded-lg p-2 relative">
+                    <div class="swiper-slide max-w-44 text-[#303030] border-2 border-[#E7E7EA] rounded-lg p-2 relative"
+                        data-nome="Camisa Preta">
                         <span
                             class="text-xs text-[#FFFFFF] bg-[#00264E] rounded-md p-1 absolute top-1 left-1">NOVO</span>
-                        <img src="./assets/anuncio.svg" alt="produto">
+                        <img src="./assets/anuncio-camisa-preta.png" alt="produto">
                         <h3 class="my-2">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h3>
                         <div class="flex items-center gap-3 ">
                             <p class="line-through"> R$ 100,00</p>
@@ -569,10 +583,11 @@
                         <button
                             class="bg-[#005CFF] text-[#FFFFFF] py-2 px-6 rounded-lg text-sm w-full my-2">Comprar</button>
                     </div>
-                    <div class="swiper-slide max-w-44 text-[#303030] border-2 border-[#E7E7EA] rounded-lg p-2 relative">
+                    <div class="swiper-slide max-w-44 text-[#303030] border-2 border-[#E7E7EA] rounded-lg p-2 relative"
+                        data-nome="Camisa Preta">
                         <span
                             class="text-xs text-[#FFFFFF] bg-[#00264E] rounded-md p-1 absolute top-1 left-1">NOVO</span>
-                        <img src="./assets/anuncio.svg" alt="produto">
+                        <img src="./assets/anuncio-camisa-preta.png" alt="produto">
                         <h3 class="my-2">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h3>
                         <div class="flex items-center gap-3 ">
                             <p class="line-through"> R$ 100,00</p>
