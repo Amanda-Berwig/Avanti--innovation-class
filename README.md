@@ -30,7 +30,8 @@ Este projeto foi desenvolvido como parte do **processo seletivo do programa de e
 
 ### 💻 Versão Desktop
 
-![Print Desktop]()
+![Print Desktop](./assets/print-desktop.png)
+![Print Desktop](./assets/print-desktop3.png)
 
 ### 📱 Versão Mobile
 
