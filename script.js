@@ -53,6 +53,7 @@ document.querySelectorAll('.accordion-header').forEach(button => {
 const toggleBtn = document.getElementById('toggleMenu');
 const menuCategorias = document.getElementById('menuCategorias');
 const menuFeminino = document.getElementById('menuFeminino');
+const navLinks = document.querySelectorAll('nav a');
 
 // Show menu on click (keeping the original click functionality)
 toggleBtn.addEventListener('click', () => {
@@ -63,6 +64,7 @@ menuFeminino.addEventListener('mouseenter', () => {
   menuCategorias.classList.remove('hidden');
 });
 
+//////
 const closeMenuCategorias = e => {
   // Small delay to allow moving to the menu
   setTimeout(() => {
