@@ -52,9 +52,39 @@ document.querySelectorAll('.accordion-header').forEach(button => {
 
 const toggleBtn = document.getElementById('toggleMenu');
 const menuCategorias = document.getElementById('menuCategorias');
+const menuFeminino = document.getElementById('menuFeminino');
 
+// Show menu on click (keeping the original click functionality)
 toggleBtn.addEventListener('click', () => {
   menuCategorias.classList.toggle('hidden');
+});
+
+menuFeminino.addEventListener('mouseenter', () => {
+  menuCategorias.classList.remove('hidden');
+});
+
+const closeMenuCategorias = e => {
+  // Small delay to allow moving to the menu
+  setTimeout(() => {
+    // Check if neither element is being hovered
+    if (!menuCategorias.matches(':hover') && !toggleBtn.matches(':hover')) {
+      menuCategorias.classList.add('hidden');
+    }
+  }, 100);
+};
+
+// Hide menu when mouse leaves both elements
+toggleBtn.addEventListener('mouseleave', closeMenuCategorias);
+toggleBtn.addEventListener('mouseleave', closeMenuCategorias);
+
+menuCategorias.addEventListener('mouseleave', e => {
+  // Small delay to allow moving to the toggle button
+  setTimeout(() => {
+    // Check if neither element is being hovered
+    if (!menuCategorias.matches(':hover') && !toggleBtn.matches(':hover')) {
+      menuCategorias.classList.add('hidden');
+    }
+  }, 100);
 });
 
 // Fechar o menu se clicar fora dele
