@@ -1,0 +1,25 @@
+{
+  "name": "avanti--innovation-class",
+  "version": "1.0.0",
+  "description": "Este projeto foi desenvolvido como parte do **processo seletivo do programa de estágio Innovation Class Tech - Desenvolvimento Front-End**.",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Amanda-Berwig/Avanti--innovation-class.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Amanda-Berwig/Avanti--innovation-class/issues"
+  },
+  "homepage": "https://github.com/Amanda-Berwig/Avanti--innovation-class#readme",
+  "devDependencies": {
+    "prettier": "^3.5.3"
+  }
+}

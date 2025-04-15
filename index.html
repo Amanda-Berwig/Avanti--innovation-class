@@ -1,920 +1,996 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Avanti</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
-        rel="stylesheet">
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+      rel="stylesheet"
+    />
     <style>
-        .swiper-button-next::after,
-        .swiper-button-prev::after {
-            display: none !important;
-        }
+      .swiper-button-next::after,
+      .swiper-button-prev::after {
+        display: none !important;
+      }
     </style>
+  </head>
 
-</head>
-
-<body style="font-family: 'Nunito Sans', sans-serif;" class="text-sm">
+  <body style="font-family: 'Nunito Sans', sans-serif" class="text-sm">
     <header>
-        <div>
-            <p class="bg-[#005CFF] text-[#FFFFFF] font-bold px-5 py-1 text-center">Ganhe <span
-                    class="italic bg-indigo-500">R$10,00</span> de
-                desconto no seu primeiro pedido. Utilize o cupom <span class="font-normal">DESCONTO10</span>
-            </p>
-        </div>
-        <div class="lg:flex flex-row lg:items-center lg:justify-between lg:px-12">
-            <div class="flex mx-4 mt-5 gap-16 justify-center">
-                <button class="lg:hidden">
-                    <img src="./assets/menu.svg" alt="Menu">
-                </button>
-                <img src="./assets/logo-avanti.svg" alt="logo-avanti">
-                <a href="#" class="relative inline-block lg:hidden">
-                    <img src="./assets/sacola.png" alt="sacola compras"><img src="./assets/compras.png"
-                        alt="numero de compras" class="absolute -top-1.5 -right-1.5 w-4 h-4"></a>
-            </div>
-
-            <div class="relative w-[90%] lg:max-w-96 mx-4 lg:mx-0 mt-9 mb-6">
-                <input type="search" id="campoBusca" placeholder="Digite aqui o que você procura"
-                    class="border-2 border-[#DDDDDD] rounded-md placeholder-black font-semibold py-2 pl-5 pr-10 w-full" />
-
-                <button onclick="buscar()" class="absolute right-3 top-1/2 transform -translate-y-1/2">
-                    <img src="/assets/lupa.svg" alt="Buscar" class="w-5 h-5" />
-                </button>
-            </div>
-            <a href="#" class="hidden lg:flex lg:gap-1 items-center"><img src="/assets/usuario.svg" alt="usuario">
-                <p class="leading-none">Olá, <br>
-                    Nome cliente!</p>
-            </a>
-            <a href="#" class="relative hidden lg:inline-block">
-                <img src="./assets/sacola.png" alt="sacola compras"><img src="./assets/compras.png"
-                    alt="numero de compras" class="absolute -top-1.5 -right-1.5 w-4 h-4"></a>
-        </div>
-        <!-- Resultado da busca -->
-        <p id="resultadoBusca" class="block text-base lg:text-lg text-[#303030] mx-4 lg:text-center">
+      <div>
+        <p class="bg-[#005CFF] text-[#FFFFFF] font-bold px-5 py-1 text-center">
+          Ganhe <span class="italic bg-indigo-500">R$10,00</span> de desconto no seu primeiro
+          pedido. Utilize o cupom <span class="font-normal">DESCONTO10</span>
         </p>
+      </div>
+      <div class="lg:flex flex-row lg:items-center lg:justify-between lg:px-12">
+        <div class="flex mx-4 mt-5 gap-16 justify-center">
+          <button class="lg:hidden">
+            <img src="./assets/menu.svg" alt="Menu" />
+          </button>
+          <img src="./assets/logo-avanti.svg" alt="logo-avanti" />
+          <a href="#" class="relative inline-block lg:hidden">
+            <img src="./assets/sacola.png" alt="sacola compras" /><img
+              src="./assets/compras.png"
+              alt="numero de compras"
+              class="absolute -top-1.5 -right-1.5 w-4 h-4"
+          /></a>
+        </div>
+
+        <div class="relative w-[90%] lg:max-w-96 mx-4 lg:mx-0 mt-9 mb-6">
+          <input
+            type="search"
+            id="campoBusca"
+            placeholder="Digite aqui o que você procura"
+            class="border-2 border-[#DDDDDD] rounded-md placeholder-black font-semibold py-2 pl-5 pr-10 w-full"
+          />
+
+          <button onclick="buscar()" class="absolute right-3 top-1/2 transform -translate-y-1/2">
+            <img src="/assets/lupa.svg" alt="Buscar" class="w-5 h-5" />
+          </button>
+        </div>
+        <a href="#" class="hidden lg:flex lg:gap-1 items-center"
+          ><img src="/assets/usuario.svg" alt="usuario" />
+          <p class="leading-none">
+            Olá, <br />
+            Nome cliente!
+          </p>
+        </a>
+        <a href="#" class="relative hidden lg:inline-block">
+          <img src="./assets/sacola.png" alt="sacola compras" /><img
+            src="./assets/compras.png"
+            alt="numero de compras"
+            class="absolute -top-1.5 -right-1.5 w-4 h-4"
+        /></a>
+      </div>
+      <!-- Resultado da busca -->
+      <p
+        id="resultadoBusca"
+        class="block text-base lg:text-lg text-[#303030] mx-4 lg:text-center"
+      ></p>
     </header>
 
     <!-- MENU NAV -->
-    <nav class="hidden relative shadow p-4 lg:flex items-center gap-6 bg-white z-20 ">
-        <button id="toggleMenu" class="text-[#000000] font-bold flex items-center gap-2">
-            <img src="./assets/menu.svg" alt="menu hamburguer">
-            Todas as Categorias
-        </button>
-        <a href="#" class="text-sm">Departamento</a>
-        <a href="#" class="text-sm">Departamento</a>
-        <a href="#" class="text-sm">Departamento</a>
-        <a href="#" class="text-sm">Departamento</a>
-        <a href="#" class="text-sm">Departamento</a>
-        <a href="#" class="text-sm">Departamento</a>
-        <a href="#" class="text-sm">Departamento</a>
-
+    <nav class="hidden relative shadow p-4 lg:flex items-center gap-6 bg-white z-20">
+      <button id="toggleMenu" class="text-[#000000] font-bold flex items-center gap-2">
+        <img src="./assets/menu.svg" alt="menu hamburguer" />
+        Todas as Categorias
+      </button>
+      <a href="#" class="text-sm">Departamento</a>
+      <a href="#" class="text-sm">Departamento</a>
+      <a href="#" class="text-sm">Departamento</a>
+      <a href="#" class="text-sm">Departamento</a>
+      <a href="#" class="text-sm">Departamento</a>
+      <a href="#" class="text-sm">Departamento</a>
+      <a href="#" class="text-sm">Departamento</a>
     </nav>
 
     <!-- MENU DE CATEGORIAS (inicia oculto) -->
     <div id="menuCategorias" class="hidden bg-[#FFFFFF] absolute p-4 w-full z-10 shadow-lg h-80">
-        <div class="flex">
-            <!-- COLUNA DEPARTAMENTOS -->
-            <ul class="w-48 border-r pr-4 relative">
-                <li class="group">
-                    <a href="#"
-                        class="flex px-4 py-2 font-semibold hover:text-[#005CFF] hover:font-bold justify-between items-center">Departamento
-                        <img src="./assets/arrow.png" alt="seta" class="-rotate-90">
-                    </a>
-                    <div class="absolute -top-2 left-full ml-8 hidden group-hover:flex p-6 gap-32 z-10">
-                        <div class="text-sm">
-                            <h4 class="text-blue-600 font-bold mb-2">Categoria</h4>
-                            <ul class="text-gray-700 text-sm space-y-3">
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
+      <div class="flex">
+        <!-- COLUNA DEPARTAMENTOS -->
+        <ul class="w-48 border-r pr-4 relative">
+          <li class="group">
+            <a
+              href="#"
+              class="flex px-4 py-2 font-semibold hover:text-[#005CFF] hover:font-bold justify-between items-center"
+              >Departamento
+              <img src="./assets/arrow.png" alt="seta" class="-rotate-90" />
+            </a>
+            <div class="absolute -top-2 left-full ml-8 hidden group-hover:flex p-6 gap-32 z-10">
+              <div class="text-sm">
+                <h4 class="text-blue-600 font-bold mb-2">Categoria</h4>
+                <ul class="text-gray-700 text-sm space-y-3">
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                </ul>
+              </div>
+              <div class="text-sm">
+                <h4 class="text-blue-600 font-bold mb-2">Categoria</h4>
+                <ul class="text-gray-700 text-sm space-y-3">
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                </ul>
+              </div>
+              <div class="text-sm">
+                <h4 class="text-blue-600 font-bold mb-2">Categoria</h4>
+                <ul class="text-gray-700 text-sm space-y-3">
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="group">
+            <a
+              href="#"
+              class="flex px-4 py-2 font-semibold hover:text-[#005CFF] hover:font-bold justify-between items-center"
+              >Departamento
+              <img src="./assets/arrow.png" alt="seta" class="-rotate-90" />
+            </a>
+            <div class="absolute -top-2 left-full ml-8 hidden group-hover:flex p-6 gap-32 z-10">
+              <div class="text-sm">
+                <h4 class="text-blue-600 font-bold mb-2">Categoria</h4>
+                <ul class="text-gray-700 text-sm space-y-3">
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                </ul>
+              </div>
+              <div class="text-sm">
+                <h4 class="text-blue-600 font-bold mb-2">Categoria</h4>
+                <ul class="text-gray-700 text-sm space-y-3">
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                </ul>
+              </div>
+              <div class="text-sm">
+                <h4 class="text-blue-600 font-bold mb-2">Categoria</h4>
+                <ul class="text-gray-700 text-sm space-y-3">
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="group">
+            <a
+              href="#"
+              class="flex px-4 py-2 font-semibold hover:text-[#005CFF] hover:font-bold justify-between items-center"
+              >Departamento
+              <img src="./assets/arrow.png" alt="seta" class="-rotate-90" />
+            </a>
+            <div class="absolute -top-2 left-full ml-8 hidden group-hover:flex p-6 gap-32 z-10">
+              <div class="text-sm">
+                <h4 class="text-blue-600 font-bold mb-2">Categoria</h4>
+                <ul class="text-gray-700 text-sm space-y-3">
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                </ul>
+              </div>
+              <div class="text-sm">
+                <h4 class="text-blue-600 font-bold mb-2">Categoria</h4>
+                <ul class="text-gray-700 text-sm space-y-3">
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                </ul>
+              </div>
+              <div class="text-sm">
+                <h4 class="text-blue-600 font-bold mb-2">Categoria</h4>
+                <ul class="text-gray-700 text-sm space-y-3">
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="group">
+            <a
+              href="#"
+              class="flex px-4 py-2 font-semibold hover:text-[#005CFF] hover:font-bold justify-between items-center"
+              >Departamento
+              <img src="./assets/arrow.png" alt="seta" class="-rotate-90" />
+            </a>
+            <div class="absolute -top-2 left-full ml-8 hidden group-hover:flex p-6 gap-32 z-10">
+              <div class="text-sm">
+                <h4 class="text-blue-600 font-bold mb-2">Categoria</h4>
+                <ul class="text-gray-700 text-sm space-y-3">
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                </ul>
+              </div>
+              <div class="text-sm">
+                <h4 class="text-blue-600 font-bold mb-2">Categoria</h4>
+                <ul class="text-gray-700 text-sm space-y-3">
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                </ul>
+              </div>
+              <div class="text-sm">
+                <h4 class="text-blue-600 font-bold mb-2">Categoria</h4>
+                <ul class="text-gray-700 text-sm space-y-3">
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="group">
+            <a
+              href="#"
+              class="flex px-4 py-2 font-semibold hover:text-[#005CFF] hover:font-bold justify-between items-center"
+              >Departamento
+              <img src="./assets/arrow.png" alt="seta" class="-rotate-90" />
+            </a>
+            <div class="absolute -top-2 left-full ml-8 hidden group-hover:flex p-6 gap-32 z-10">
+              <div class="text-sm">
+                <h4 class="text-blue-600 font-bold mb-2">Categoria</h4>
+                <ul class="text-gray-700 text-sm space-y-3">
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                </ul>
+              </div>
+              <div class="text-sm">
+                <h4 class="text-blue-600 font-bold mb-2">Categoria</h4>
+                <ul class="text-gray-700 text-sm space-y-3">
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                </ul>
+              </div>
+              <div class="text-sm">
+                <h4 class="text-blue-600 font-bold mb-2">Categoria</h4>
+                <ul class="text-gray-700 text-sm space-y-3">
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="group">
+            <a
+              href="#"
+              class="flex px-4 py-2 font-semibold hover:text-[#005CFF] hover:font-bold justify-between items-center"
+              >Departamento
+              <img src="./assets/arrow.png" alt="seta" class="-rotate-90" />
+            </a>
+            <div class="absolute -top-2 left-full ml-8 hidden group-hover:flex p-6 gap-32 z-10">
+              <div class="text-sm">
+                <h4 class="text-blue-600 font-bold mb-2">Categoria</h4>
+                <ul class="text-gray-700 text-sm space-y-3">
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                </ul>
+              </div>
+              <div class="text-sm">
+                <h4 class="text-blue-600 font-bold mb-2">Categoria</h4>
+                <ul class="text-gray-700 text-sm space-y-3">
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                </ul>
+              </div>
+              <div class="text-sm">
+                <h4 class="text-blue-600 font-bold mb-2">Categoria</h4>
+                <ul class="text-gray-700 text-sm space-y-3">
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="group">
+            <a
+              href="#"
+              class="flex px-4 py-2 font-semibold hover:text-[#005CFF] hover:font-bold justify-between items-center"
+              >Departamento
+              <img src="./assets/arrow.png" alt="seta" class="-rotate-90" />
+            </a>
+            <div class="absolute -top-2 left-full ml-8 hidden group-hover:flex p-6 gap-32 z-10">
+              <div class="text-sm">
+                <h4 class="text-blue-600 font-bold mb-2">Categoria</h4>
+                <ul class="text-gray-700 text-sm space-y-3">
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                </ul>
+              </div>
+              <div class="text-sm">
+                <h4 class="text-blue-600 font-bold mb-2">Categoria</h4>
+                <ul class="text-gray-700 text-sm space-y-3">
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                </ul>
+              </div>
+              <div class="text-sm">
+                <h4 class="text-blue-600 font-bold mb-2">Categoria</h4>
+                <ul class="text-gray-700 text-sm space-y-3">
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="group">
+            <a
+              href="#"
+              class="flex px-4 py-2 font-semibold hover:text-[#005CFF] hover:font-bold justify-between items-center"
+              >Departamento
+              <img src="./assets/arrow.png" alt="seta" class="-rotate-90" />
+            </a>
+            <div class="absolute -top-2 left-full ml-8 hidden group-hover:flex p-6 gap-32 z-10">
+              <div class="text-sm">
+                <h4 class="text-blue-600 font-bold mb-2">Categoria</h4>
+                <ul class="text-gray-700 text-sm space-y-3">
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                </ul>
+              </div>
+              <div class="text-sm">
+                <h4 class="text-blue-600 font-bold mb-2">Categoria</h4>
+                <ul class="text-gray-700 text-sm space-y-3">
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                </ul>
+              </div>
+              <div class="text-sm">
+                <h4 class="text-blue-600 font-bold mb-2">Categoria</h4>
+                <ul class="text-gray-700 text-sm space-y-3">
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                  <li><a href="#" class="hover:underline">Categoria</a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="absolute right-12 top-0 mt-4 w-60 h-72">
+        <!-- Imagem -->
+        <img
+          src="./assets/segundo-banner.png"
+          alt="Banner"
+          class="w-full h-full rounded-lg object-cover"
+        />
+        <div
+          class="absolute inset-0 bg-gradient-to-l from-black/80 via-transparent to-transparent"
+        ></div>
 
-                            </ul>
-                        </div>
-                        <div class="text-sm">
-                            <h4 class="text-blue-600 font-bold mb-2">Categoria</h4>
-                            <ul class="text-gray-700 text-sm space-y-3">
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                            </ul>
-                        </div>
-                        <div class="text-sm">
-                            <h4 class="text-blue-600 font-bold mb-2">Categoria</h4>
-                            <ul class="text-gray-700 text-sm space-y-3">
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                </li>
-                <li class="group ">
-                    <a href="#"
-                        class="flex px-4 py-2 font-semibold hover:text-[#005CFF] hover:font-bold justify-between items-center">Departamento
-                        <img src="./assets/arrow.png" alt="seta" class="-rotate-90">
-                    </a>
-                    <div class="absolute -top-2 left-full ml-8 hidden group-hover:flex p-6 gap-32 z-10">
-                        <div class="text-sm">
-                            <h4 class="text-blue-600 font-bold mb-2">Categoria</h4>
-                            <ul class="text-gray-700 text-sm space-y-3">
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-
-                            </ul>
-                        </div>
-                        <div class="text-sm">
-                            <h4 class="text-blue-600 font-bold mb-2">Categoria</h4>
-                            <ul class="text-gray-700 text-sm space-y-3">
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                            </ul>
-                        </div>
-                        <div class="text-sm">
-                            <h4 class="text-blue-600 font-bold mb-2">Categoria</h4>
-                            <ul class="text-gray-700 text-sm space-y-3">
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                </li>
-                <li class="group">
-                    <a href="#"
-                        class="flex px-4 py-2 font-semibold hover:text-[#005CFF] hover:font-bold justify-between items-center">Departamento
-                        <img src="./assets/arrow.png" alt="seta" class="-rotate-90">
-                    </a>
-                    <div class="absolute -top-2 left-full ml-8 hidden group-hover:flex p-6 gap-32 z-10">
-                        <div class="text-sm">
-                            <h4 class="text-blue-600 font-bold mb-2">Categoria</h4>
-                            <ul class="text-gray-700 text-sm space-y-3">
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-
-                            </ul>
-                        </div>
-                        <div class="text-sm">
-                            <h4 class="text-blue-600 font-bold mb-2">Categoria</h4>
-                            <ul class="text-gray-700 text-sm space-y-3">
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                            </ul>
-                        </div>
-                        <div class="text-sm">
-                            <h4 class="text-blue-600 font-bold mb-2">Categoria</h4>
-                            <ul class="text-gray-700 text-sm space-y-3">
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                </li>
-                <li class="group">
-                    <a href="#"
-                        class="flex px-4 py-2 font-semibold hover:text-[#005CFF] hover:font-bold justify-between items-center">Departamento
-                        <img src="./assets/arrow.png" alt="seta" class="-rotate-90">
-                    </a>
-                    <div class="absolute -top-2 left-full ml-8 hidden group-hover:flex p-6 gap-32 z-10">
-                        <div class="text-sm">
-                            <h4 class="text-blue-600 font-bold mb-2">Categoria</h4>
-                            <ul class="text-gray-700 text-sm space-y-3">
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-
-                            </ul>
-                        </div>
-                        <div class="text-sm">
-                            <h4 class="text-blue-600 font-bold mb-2">Categoria</h4>
-                            <ul class="text-gray-700 text-sm space-y-3">
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                            </ul>
-                        </div>
-                        <div class="text-sm">
-                            <h4 class="text-blue-600 font-bold mb-2">Categoria</h4>
-                            <ul class="text-gray-700 text-sm space-y-3">
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                </li>
-                <li class="group">
-                    <a href="#"
-                        class="flex px-4 py-2 font-semibold hover:text-[#005CFF] hover:font-bold justify-between items-center">Departamento
-                        <img src="./assets/arrow.png" alt="seta" class="-rotate-90">
-                    </a>
-                    <div class="absolute -top-2 left-full ml-8 hidden group-hover:flex p-6 gap-32 z-10">
-                        <div class="text-sm">
-                            <h4 class="text-blue-600 font-bold mb-2">Categoria</h4>
-                            <ul class="text-gray-700 text-sm space-y-3">
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-
-                            </ul>
-                        </div>
-                        <div class="text-sm">
-                            <h4 class="text-blue-600 font-bold mb-2">Categoria</h4>
-                            <ul class="text-gray-700 text-sm space-y-3">
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                            </ul>
-                        </div>
-                        <div class="text-sm">
-                            <h4 class="text-blue-600 font-bold mb-2">Categoria</h4>
-                            <ul class="text-gray-700 text-sm space-y-3">
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                </li>
-                <li class="group">
-                    <a href="#"
-                        class="flex px-4 py-2 font-semibold hover:text-[#005CFF] hover:font-bold justify-between items-center">Departamento
-                        <img src="./assets/arrow.png" alt="seta" class="-rotate-90">
-                    </a>
-                    <div class="absolute -top-2 left-full ml-8 hidden group-hover:flex p-6 gap-32 z-10">
-                        <div class="text-sm">
-                            <h4 class="text-blue-600 font-bold mb-2">Categoria</h4>
-                            <ul class="text-gray-700 text-sm space-y-3">
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-
-                            </ul>
-                        </div>
-                        <div class="text-sm">
-                            <h4 class="text-blue-600 font-bold mb-2">Categoria</h4>
-                            <ul class="text-gray-700 text-sm space-y-3">
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                            </ul>
-                        </div>
-                        <div class="text-sm">
-                            <h4 class="text-blue-600 font-bold mb-2">Categoria</h4>
-                            <ul class="text-gray-700 text-sm space-y-3">
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                </li>
-                <li class="group">
-                    <a href="#"
-                        class="flex px-4 py-2 font-semibold hover:text-[#005CFF] hover:font-bold justify-between items-center">Departamento
-                        <img src="./assets/arrow.png" alt="seta" class="-rotate-90">
-                    </a>
-                    <div class="absolute -top-2 left-full ml-8 hidden group-hover:flex p-6 gap-32 z-10">
-                        <div class="text-sm">
-                            <h4 class="text-blue-600 font-bold mb-2">Categoria</h4>
-                            <ul class="text-gray-700 text-sm space-y-3">
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-
-                            </ul>
-                        </div>
-                        <div class="text-sm">
-                            <h4 class="text-blue-600 font-bold mb-2">Categoria</h4>
-                            <ul class="text-gray-700 text-sm space-y-3">
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                            </ul>
-                        </div>
-                        <div class="text-sm">
-                            <h4 class="text-blue-600 font-bold mb-2">Categoria</h4>
-                            <ul class="text-gray-700 text-sm space-y-3">
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                </li>
-                <li class="group">
-                    <a href="#"
-                        class="flex px-4 py-2 font-semibold hover:text-[#005CFF] hover:font-bold justify-between items-center">Departamento
-                        <img src="./assets/arrow.png" alt="seta" class="-rotate-90">
-                    </a>
-                    <div class="absolute -top-2 left-full ml-8 hidden group-hover:flex p-6 gap-32 z-10">
-                        <div class="text-sm">
-                            <h4 class="text-blue-600 font-bold mb-2">Categoria</h4>
-                            <ul class="text-gray-700 text-sm space-y-3">
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-
-                            </ul>
-                        </div>
-                        <div class="text-sm">
-                            <h4 class="text-blue-600 font-bold mb-2">Categoria</h4>
-                            <ul class="text-gray-700 text-sm space-y-3">
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                            </ul>
-                        </div>
-                        <div class="text-sm">
-                            <h4 class="text-blue-600 font-bold mb-2">Categoria</h4>
-                            <ul class="text-gray-700 text-sm space-y-3">
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                                <li><a href="#" class="hover:underline">Categoria</a></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                </li>
-            </ul>
-        </div>
-        <div class="absolute right-12 top-0 mt-4 w-60 h-72">
-            <!-- Imagem -->
-            <img src="./assets/segundo-banner.png" alt="Banner" class="w-full h-full rounded-lg object-cover">
-            <div class="absolute inset-0 bg-gradient-to-l from-black/80 via-transparent to-transparent"></div>
-
-            <!-- Texto sobre a imagem -->
-            <p class="absolute top-6 left-4 text-white text-2xl font-semibold">
-                Confira os<br>
-                Produtos<br>
-                Que <br>
-                acabaram <br>
-                De chegar
-            </p>
-            <button
-                class="absolute top-55 left-4 border border-[#FFFFFF] text-[#FFFFFF] p-2 rounded-lg hover:text-[#005CFF] hover:border-[#005CFF] ">VER
-                TODOS</button>
-        </div>
-
+        <!-- Texto sobre a imagem -->
+        <p class="absolute top-6 left-4 text-white text-2xl font-semibold">
+          Confira os<br />
+          Produtos<br />
+          Que <br />
+          acabaram <br />
+          De chegar
+        </p>
+        <button
+          class="absolute top-55 left-4 border border-[#FFFFFF] text-[#FFFFFF] p-2 rounded-lg hover:text-[#005CFF] hover:border-[#005CFF]"
+        >
+          VER TODOS
+        </button>
+      </div>
     </div>
     <main>
-        <!-- Section SALE -->
-        <section class="flex bg-[#e8e9eb] items-center justify-center overflow-hidden mb-14 lg:gap-6">
-            <img src="./assets/cadeira.png" alt="cadeira com roupas"
-                class="w-56 h-72 object-cover scale-150 lg:scale-[1.75] -translate-x-14 -translate-y-10 ">
-            <div class="flex flex-col my-16 text-center gap-3">
-                <p class="text-4xl sm:text-5xl lg:text-6xl">
-                    <span class="block font-bold sm:inline">SUPER</span> <span>SALE</span>
-                </p>
-                <p style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);"
-                    class="text-xs text-[#005CFF] font-bold sm:text-sm lg:tracking-[0.3rem]">ITENS
-                    SELECIONADOS COM ATÉ
-                    <br /><span class="text-3xl sm:text-4xl lg:text-5xl">50%OFF</span>
-                </p>
+      <!-- Section SALE -->
+      <section class="flex bg-[#e8e9eb] items-center justify-center overflow-hidden mb-14 lg:gap-6">
+        <img
+          src="./assets/cadeira.png"
+          alt="cadeira com roupas"
+          class="w-56 h-72 object-cover scale-150 lg:scale-[1.75] -translate-x-14 -translate-y-10"
+        />
+        <div class="flex flex-col my-16 text-center gap-3">
+          <p class="text-4xl sm:text-5xl lg:text-6xl">
+            <span class="block font-bold sm:inline">SUPER</span> <span>SALE</span>
+          </p>
+          <p
+            style="text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3)"
+            class="text-xs text-[#005CFF] font-bold sm:text-sm lg:tracking-[0.3rem]"
+          >
+            ITENS SELECIONADOS COM ATÉ <br /><span class="text-3xl sm:text-4xl lg:text-5xl"
+              >50%OFF</span
+            >
+          </p>
+        </div>
+      </section>
+      <!-- Section Lançamentos -->
+      <section class="px-4 items-center mb-6">
+        <div class="flex justify-between items-center m-4">
+          <h2 class="text-base font-bold">Lançamentos</h2>
+          <p class="underline font-bold">Ver mais</p>
+        </div>
+
+        <!-- Slider main container -->
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div
+              class="swiper-slide max-w-44 text-[#303030] border-2 border-[#E7E7EA] rounded-lg p-2 relative"
+              data-nome="Camisa Branca"
+            >
+              <span class="text-xs text-[#FFFFFF] bg-[#00264E] rounded-md p-1 absolute top-1 left-1"
+                >NOVO</span
+              >
+              <img src="./assets/anuncio.svg" alt="produto" />
+              <h3 class="my-2">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h3>
+              <div class="flex items-center gap-3">
+                <p class="line-through">R$ 100,00</p>
+                <span class="text-xs bg-[#5EC0BE] text-[#FFFFFF] rounded-sm px-2 py-1">10%OFF</span>
+              </div>
+
+              <p class="text-base font-bold">R$ 79,90</p>
+              <p>Ou em até <span class="font-bold">10x de R$ 7,90</span></p>
+
+              <button class="bg-[#005CFF] text-[#FFFFFF] py-2 px-6 rounded-lg text-sm w-full my-2">
+                Comprar
+              </button>
             </div>
-        </section>
-        <!-- Section Lançamentos -->
-        <section class="px-4 items-center mb-6">
-            <div class="flex justify-between items-center m-4">
-                <h2 class="text-base font-bold">Lançamentos</h2>
-                <p class="underline font-bold">Ver mais</p>
+            <div
+              class="swiper-slide max-w-44 text-[#303030] border-2 border-[#E7E7EA] rounded-lg p-2 relative"
+              data-nome="Camisa Branca"
+            >
+              <span class="text-xs text-[#FFFFFF] bg-[#00264E] rounded-md p-1 absolute top-1 left-1"
+                >NOVO</span
+              >
+              <img src="./assets/anuncio.svg" alt="produto" />
+              <h3 class="my-2">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h3>
+              <div class="flex items-center gap-3">
+                <p class="line-through">R$ 100,00</p>
+                <span class="text-xs bg-[#5EC0BE] text-[#FFFFFF] rounded-sm px-2 py-1">10%OFF</span>
+              </div>
+
+              <p class="text-base font-bold">R$ 79,90</p>
+              <p>Ou em até <span class="font-bold">10x de R$ 7,90</span></p>
+
+              <button class="bg-[#005CFF] text-[#FFFFFF] py-2 px-6 rounded-lg text-sm w-full my-2">
+                Comprar
+              </button>
             </div>
+            <div
+              class="swiper-slide max-w-44 text-[#303030] border-2 border-[#E7E7EA] rounded-lg p-2 relative"
+              data-nome="Camisa Branca"
+            >
+              <span class="text-xs text-[#FFFFFF] bg-[#00264E] rounded-md p-1 absolute top-1 left-1"
+                >NOVO</span
+              >
+              <img src="./assets/anuncio.svg" alt="produto" />
+              <h3 class="my-2">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h3>
+              <div class="flex items-center gap-3">
+                <p class="line-through">R$ 100,00</p>
+                <span class="text-xs bg-[#5EC0BE] text-[#FFFFFF] rounded-sm px-2 py-1">10%OFF</span>
+              </div>
 
-            <!-- Slider main container -->
-            <div class="swiper">
-                <div class="swiper-wrapper">
-                    <!-- Slides -->
-                    <div class="swiper-slide max-w-44 text-[#303030] border-2 border-[#E7E7EA] rounded-lg p-2 relative"
-                        data-nome="Camisa Branca">
-                        <span
-                            class="text-xs text-[#FFFFFF] bg-[#00264E] rounded-md p-1 absolute top-1 left-1">NOVO</span>
-                        <img src="./assets/anuncio.svg" alt="produto">
-                        <h3 class="my-2">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h3>
-                        <div class="flex items-center gap-3 ">
-                            <p class="line-through"> R$ 100,00</p>
-                            <span class="text-xs bg-[#5EC0BE] text-[#FFFFFF] rounded-sm px-2 py-1">10%OFF</span>
-                        </div>
+              <p class="text-base font-bold">R$ 79,90</p>
+              <p>Ou em até <span class="font-bold">10x de R$ 7,90</span></p>
 
-                        <p class="text-base font-bold">R$ 79,90</p>
-                        <p>Ou em até <span class="font-bold">10x de R$ 7,90</span></p>
-
-                        <button
-                            class="bg-[#005CFF] text-[#FFFFFF] py-2 px-6 rounded-lg text-sm w-full my-2">Comprar</button>
-                    </div>
-                    <div class="swiper-slide max-w-44 text-[#303030] border-2 border-[#E7E7EA] rounded-lg p-2 relative"
-                        data-nome="Camisa Branca">
-                        <span
-                            class="text-xs text-[#FFFFFF] bg-[#00264E] rounded-md p-1 absolute top-1 left-1">NOVO</span>
-                        <img src="./assets/anuncio.svg" alt="produto">
-                        <h3 class="my-2">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h3>
-                        <div class="flex items-center gap-3 ">
-                            <p class="line-through"> R$ 100,00</p>
-                            <span class="text-xs bg-[#5EC0BE] text-[#FFFFFF] rounded-sm px-2 py-1">10%OFF</span>
-                        </div>
-
-                        <p class="text-base font-bold">R$ 79,90</p>
-                        <p>Ou em até <span class="font-bold">10x de R$ 7,90</span></p>
-
-                        <button
-                            class="bg-[#005CFF] text-[#FFFFFF] py-2 px-6 rounded-lg text-sm w-full my-2">Comprar</button>
-                    </div>
-                    <div class="swiper-slide max-w-44 text-[#303030] border-2 border-[#E7E7EA] rounded-lg p-2 relative"
-                        data-nome="Camisa Branca">
-                        <span
-                            class="text-xs text-[#FFFFFF] bg-[#00264E] rounded-md p-1 absolute top-1 left-1">NOVO</span>
-                        <img src="./assets/anuncio.svg" alt="produto">
-                        <h3 class="my-2">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h3>
-                        <div class="flex items-center gap-3 ">
-                            <p class="line-through"> R$ 100,00</p>
-                            <span class="text-xs bg-[#5EC0BE] text-[#FFFFFF] rounded-sm px-2 py-1">10%OFF</span>
-                        </div>
-
-                        <p class="text-base font-bold">R$ 79,90</p>
-                        <p>Ou em até <span class="font-bold">10x de R$ 7,90</span></p>
-
-                        <button class="bg-[#005CFF] text-[#FFFFFF] py-2 px-6 rounded-lg text-sm w-full my-2">Comprar
-                        </button>
-                    </div>
-                    <div class="swiper-slide max-w-44 text-[#303030] border-2 border-[#E7E7EA] rounded-lg p-2 relative"
-                        data-nome="Camisa Preta">
-                        <span
-                            class="text-xs text-[#FFFFFF] bg-[#00264E] rounded-md p-1 absolute top-1 left-1">NOVO</span>
-                        <img src="./assets/anuncio-camisa-preta.png" alt="produto">
-                        <h3 class="my-2">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h3>
-                        <div class="flex items-center gap-3 ">
-                            <p class="line-through"> R$ 100,00</p>
-                            <span class="text-xs bg-[#5EC0BE] text-[#FFFFFF] rounded-sm px-2 py-1">10%OFF</span>
-                        </div>
-
-                        <p class="text-base font-bold">R$ 79,90</p>
-                        <p>Ou em até <span class="font-bold">10x de R$ 7,90</span></p>
-
-                        <button
-                            class="bg-[#005CFF] text-[#FFFFFF] py-2 px-6 rounded-lg text-sm w-full my-2">Comprar</button>
-                    </div>
-                    <div class="swiper-slide max-w-44 text-[#303030] border-2 border-[#E7E7EA] rounded-lg p-2 relative"
-                        data-nome="Camisa Preta">
-                        <span
-                            class="text-xs text-[#FFFFFF] bg-[#00264E] rounded-md p-1 absolute top-1 left-1">NOVO</span>
-                        <img src="./assets/anuncio-camisa-preta.png" alt="produto">
-                        <h3 class="my-2">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h3>
-                        <div class="flex items-center gap-3 ">
-                            <p class="line-through"> R$ 100,00</p>
-                            <span class="text-xs bg-[#5EC0BE] text-[#FFFFFF] rounded-sm px-2 py-1">10%OFF</span>
-                        </div>
-
-                        <p class="text-base font-bold">R$ 79,90</p>
-                        <p>Ou em até <span class="font-bold">10x de R$ 7,90</span></p>
-
-                        <button
-                            class="bg-[#005CFF] text-[#FFFFFF] py-2 px-6 rounded-lg text-sm w-full my-2">Comprar</button>
-                    </div>
-                    <div class="swiper-slide max-w-44 text-[#303030] border-2 border-[#E7E7EA] rounded-lg p-2 relative"
-                        data-nome="Camisa Preta">
-                        <span
-                            class="text-xs text-[#FFFFFF] bg-[#00264E] rounded-md p-1 absolute top-1 left-1">NOVO</span>
-                        <img src="./assets/anuncio-camisa-preta.png" alt="produto">
-                        <h3 class="my-2">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h3>
-                        <div class="flex items-center gap-3 ">
-                            <p class="line-through"> R$ 100,00</p>
-                            <span class="text-xs bg-[#5EC0BE] text-[#FFFFFF] rounded-sm px-2 py-1">10%OFF</span>
-                        </div>
-
-                        <p class="text-base font-bold">R$ 79,90</p>
-                        <p>Ou em até <span class="font-bold">10x de R$ 7,90</span></p>
-
-                        <button
-                            class="bg-[#005CFF] text-[#FFFFFF] py-2 px-6 rounded-lg text-sm w-full my-2">Comprar</button>
-                    </div>
-                    <div class="swiper-slide max-w-44 text-[#303030] border-2 border-[#E7E7EA] rounded-lg p-2 relative"
-                        data-nome="Camisa Preta">
-                        <span
-                            class="text-xs text-[#FFFFFF] bg-[#00264E] rounded-md p-1 absolute top-1 left-1">NOVO</span>
-                        <img src="./assets/anuncio-camisa-preta.png" alt="produto">
-                        <h3 class="my-2">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h3>
-                        <div class="flex items-center gap-3 ">
-                            <p class="line-through"> R$ 100,00</p>
-                            <span class="text-xs bg-[#5EC0BE] text-[#FFFFFF] rounded-sm px-2 py-1">10%OFF</span>
-                        </div>
-
-                        <p class="text-base font-bold">R$ 79,90</p>
-                        <p>Ou em até <span class="font-bold">10x de R$ 7,90</span></p>
-
-                        <button
-                            class="bg-[#005CFF] text-[#FFFFFF] py-2 px-6 rounded-lg text-sm w-full my-2">Comprar</button>
-                    </div>
-                    <div class="swiper-slide max-w-44 text-[#303030] border-2 border-[#E7E7EA] rounded-lg p-2 relative"
-                        data-nome="Camisa Branca">
-                        <span
-                            class="text-xs text-[#FFFFFF] bg-[#00264E] rounded-md p-1 absolute top-1 left-1">NOVO</span>
-                        <img src="./assets/anuncio.svg" alt="produto">
-                        <h3 class="my-2">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h3>
-                        <div class="flex items-center gap-3 ">
-                            <p class="line-through"> R$ 100,00</p>
-                            <span class="text-xs bg-[#5EC0BE] text-[#FFFFFF] rounded-sm px-2 py-1">10%OFF</span>
-                        </div>
-
-                        <p class="text-base font-bold">R$ 79,90</p>
-                        <p>Ou em até <span class="font-bold">10x de R$ 7,90</span></p>
-
-                        <button class="bg-[#005CFF] text-[#FFFFFF] py-2 px-6 rounded-lg text-sm w-full my-2">Comprar
-                        </button>
-                    </div>
-                    <div class="swiper-slide max-w-44 text-[#303030] border-2 border-[#E7E7EA] rounded-lg p-2 relative"
-                        data-nome="Camisa Branca">
-                        <span
-                            class="text-xs text-[#FFFFFF] bg-[#00264E] rounded-md p-1 absolute top-1 left-1">NOVO</span>
-                        <img src="./assets/anuncio.svg" alt="produto">
-                        <h3 class="my-2">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h3>
-                        <div class="flex items-center gap-3 ">
-                            <p class="line-through"> R$ 100,00</p>
-                            <span class="text-xs bg-[#5EC0BE] text-[#FFFFFF] rounded-sm px-2 py-1">10%OFF</span>
-                        </div>
-
-                        <p class="text-base font-bold">R$ 79,90</p>
-                        <p>Ou em até <span class="font-bold">10x de R$ 7,90</span></p>
-
-                        <button class="bg-[#005CFF] text-[#FFFFFF] py-2 px-6 rounded-lg text-sm w-full my-2">Comprar
-                        </button>
-                    </div>
-
-                </div>
-                <!-- If we need navigation buttons -->
-                <div class="swiper-button-prev"><img src="./assets/seta-swipper.svg" alt="setaprev"></div>
-                <div class="swiper-button-next"><img src="./assets/seta-swipper.svg" alt="seta next" class="rotate-180">
-                </div>
-
-                <div class="swiper-pagination-bullets flex justify-center mt-4"></div>
+              <button class="bg-[#005CFF] text-[#FFFFFF] py-2 px-6 rounded-lg text-sm w-full my-2">
+                Comprar
+              </button>
             </div>
-        </section>
-        <!--SECTION PRODUTO DESTAQUE-->
-        <section class="flex flex-col lg:flex-row lg:items-center lg:px-20 lg:mb-10">
-            <div class="bg-[#C2C2C2] lg:w-1/2 lg:h-auto">
-                <img src="./assets/xicara.png" alt="imagem xicara com o logo avanti"
-                    class="w-full mt-14 lg:mt-0 lg:h-full lg:object-cover">
-            </div>
-            <div class="lg:w-1/2 flex items-center">
-                <div class="text-[#000000] flex flex-col gap-4 mx-6 my-10">
-                    <h4 class="text-2xl font-bold">LOREM IPSUM</h4>
-                    <p class="text-sm tracking-wider">Duis consectetur metus nec lacus auctor dignissim. Mauris
-                        vitae
-                        finibus dui.
-                        Mauris
-                        laoreet lacus ut
-                        eleifend viverra. Cras efficitur volutpat dui, in lobortis metus lacinia sit amet. Sed
-                        lacinia
-                        pharetra magna, vel pulvinar ligula hendrerit a. Maecenas fringilla porttitor tortor eget
-                        lacinia.
-                        Donec sollicitudin euismod orci, auctor fringilla magna consequat interdum. Fusce sagittis
-                        elit
-                        a
-                        libero commodo egestas efficitur id augue.</p>
-                    <p class="text-sm tracking-wider">Duis consectetur metus nec lacus auctor dignissim. Mauris
-                        vitae
-                        finibus dui. Mauris
-                        laoreet lacus ut
-                        eleifend viverra. Cras efficitur volutpat dui, in lobortis metus lacinia sit amet. Sed
-                        lacinia
-                        pharetra magna, vel pulvinar ligula hendrerit a. Maecenas fringilla porttitor tortor eget
-                        lacinia.
-                        Donec sollicitudin euismod orci, auctor fringilla magna consequat interdum. Fusce sagittis
-                        elit
-                        a
-                        libero commodo egestas efficitur id augue.</p>
-                </div>
-            </div>
-        </section>
-        <!-- SECTION BANNER -->
-        <section
-            class="flex flex-col bg-[#DEDEDE] px-5 py-7 text-[#000000] mb-14 lg:flew-row lg:flex-row-reverse lg:px-20 lg:items-center lg:gap-11">
-            <img src="./assets/segundo-banner.png" alt="" class="w-full lg:w-1/2">
-            <div class="lg:w-1/2">
-                <h4 class="text-xl font-bold text-center my-5 lg:text-3xl">LOREM IPSUM</h4>
-                <div class="flex flex-col gap-5">
-                    <div class="flex items-center gap-4">
-                        <img src="./assets/pin-localização.svg" alt="" class="w-12 h-12 bg-[#005CFF] rounded-full p-3">
-                        <p class="text-xs lg:text-lg">Aenean massa. Cum sociis natoque penatibus et magnis dis
-                            parturient
-                            montes,
-                            nascetur
-                            ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. </p>
-                    </div>
-                    <div class="flex items-center gap-4">
-                        <img src="./assets/pin-localização.svg" alt="" class="w-12 h-12 bg-[#005CFF] rounded-full p-3">
-                        <p class="text-xs lg:text-lg">Aenean massa. Cum sociis natoque penatibus et magnis dis
-                            parturient
-                            montes,
-                            nascetur
-                            ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. </p>
-                    </div>
-                    <div class="flex items-center gap-4">
-                        <img src="./assets/pin-localização.svg" alt="" class="w-12 h-12 bg-[#005CFF] rounded-full p-3">
-                        <p class="text-xs lg:text-lg">Aenean massa. Cum sociis natoque penatibus et magnis dis
-                            parturient
-                            montes,
-                            nascetur
-                            ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="flex flex-col lg:flex-row lg:items-center lg:px-20  lg:mb-10">
-            <div class="bg-[#C2C2C2] lg:w-1/2 lg:h-auto">
-                <img src="./assets/xicara.png" alt="imagem xicara com o logo avanti"
-                    class="w-full mt-14 lg:mt-0 lg:h-full lg:object-cover">
-            </div>
-            <div class="lg:w-1/2 flex items-center">
-                <div class="text-[#000000] flex flex-col gap-4 mx-6 my-10">
-                    <h4 class="text-2xl font-bold">LOREM IPSUM</h4>
-                    <p class="text-sm tracking-wider">Duis consectetur metus nec lacus auctor dignissim. Mauris
-                        vitae
-                        finibus dui.
-                        Mauris
-                        laoreet lacus ut
-                        eleifend viverra. Cras efficitur volutpat dui, in lobortis metus lacinia sit amet. Sed
-                        lacinia
-                        pharetra magna, vel pulvinar ligula hendrerit a. Maecenas fringilla porttitor tortor eget
-                        lacinia.
-                        Donec sollicitudin euismod orci, auctor fringilla magna consequat interdum. Fusce sagittis
-                        elit
-                        a
-                        libero commodo egestas efficitur id augue.</p>
-                    <p class="text-sm tracking-wider">Duis consectetur metus nec lacus auctor dignissim. Mauris
-                        vitae
-                        finibus dui. Mauris
-                        laoreet lacus ut
-                        eleifend viverra. Cras efficitur volutpat dui, in lobortis metus lacinia sit amet. Sed
-                        lacinia
-                        pharetra magna, vel pulvinar ligula hendrerit a. Maecenas fringilla porttitor tortor eget
-                        lacinia.
-                        Donec sollicitudin euismod orci, auctor fringilla magna consequat interdum. Fusce sagittis
-                        elit
-                        a
-                        libero commodo egestas efficitur id augue.</p>
-                </div>
-            </div>
-        </section>
+            <div
+              class="swiper-slide max-w-44 text-[#303030] border-2 border-[#E7E7EA] rounded-lg p-2 relative"
+              data-nome="Camisa Preta"
+            >
+              <span class="text-xs text-[#FFFFFF] bg-[#00264E] rounded-md p-1 absolute top-1 left-1"
+                >NOVO</span
+              >
+              <img src="./assets/anuncio-camisa-preta.png" alt="produto" />
+              <h3 class="my-2">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h3>
+              <div class="flex items-center gap-3">
+                <p class="line-through">R$ 100,00</p>
+                <span class="text-xs bg-[#5EC0BE] text-[#FFFFFF] rounded-sm px-2 py-1">10%OFF</span>
+              </div>
 
-        <section class="relative sm:max-h-[660px]">
-            <img src="./assets/rodape.png" alt="" class="w-full sm:h-[660px] object-cover">
-            <p
-                class="bg-[#005CFF] text-[#FFFFFF] text-base font-semibold text-center px-1 py-4 absolute top-1/2 w-full">
-                Entre em contato conosco e verifique a disponibilidade para sua região! </p>
-        </section>
+              <p class="text-base font-bold">R$ 79,90</p>
+              <p>Ou em até <span class="font-bold">10x de R$ 7,90</span></p>
+
+              <button class="bg-[#005CFF] text-[#FFFFFF] py-2 px-6 rounded-lg text-sm w-full my-2">
+                Comprar
+              </button>
+            </div>
+            <div
+              class="swiper-slide max-w-44 text-[#303030] border-2 border-[#E7E7EA] rounded-lg p-2 relative"
+              data-nome="Camisa Preta"
+            >
+              <span class="text-xs text-[#FFFFFF] bg-[#00264E] rounded-md p-1 absolute top-1 left-1"
+                >NOVO</span
+              >
+              <img src="./assets/anuncio-camisa-preta.png" alt="produto" />
+              <h3 class="my-2">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h3>
+              <div class="flex items-center gap-3">
+                <p class="line-through">R$ 100,00</p>
+                <span class="text-xs bg-[#5EC0BE] text-[#FFFFFF] rounded-sm px-2 py-1">10%OFF</span>
+              </div>
+
+              <p class="text-base font-bold">R$ 79,90</p>
+              <p>Ou em até <span class="font-bold">10x de R$ 7,90</span></p>
+
+              <button class="bg-[#005CFF] text-[#FFFFFF] py-2 px-6 rounded-lg text-sm w-full my-2">
+                Comprar
+              </button>
+            </div>
+            <div
+              class="swiper-slide max-w-44 text-[#303030] border-2 border-[#E7E7EA] rounded-lg p-2 relative"
+              data-nome="Camisa Preta"
+            >
+              <span class="text-xs text-[#FFFFFF] bg-[#00264E] rounded-md p-1 absolute top-1 left-1"
+                >NOVO</span
+              >
+              <img src="./assets/anuncio-camisa-preta.png" alt="produto" />
+              <h3 class="my-2">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h3>
+              <div class="flex items-center gap-3">
+                <p class="line-through">R$ 100,00</p>
+                <span class="text-xs bg-[#5EC0BE] text-[#FFFFFF] rounded-sm px-2 py-1">10%OFF</span>
+              </div>
+
+              <p class="text-base font-bold">R$ 79,90</p>
+              <p>Ou em até <span class="font-bold">10x de R$ 7,90</span></p>
+
+              <button class="bg-[#005CFF] text-[#FFFFFF] py-2 px-6 rounded-lg text-sm w-full my-2">
+                Comprar
+              </button>
+            </div>
+            <div
+              class="swiper-slide max-w-44 text-[#303030] border-2 border-[#E7E7EA] rounded-lg p-2 relative"
+              data-nome="Camisa Preta"
+            >
+              <span class="text-xs text-[#FFFFFF] bg-[#00264E] rounded-md p-1 absolute top-1 left-1"
+                >NOVO</span
+              >
+              <img src="./assets/anuncio-camisa-preta.png" alt="produto" />
+              <h3 class="my-2">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h3>
+              <div class="flex items-center gap-3">
+                <p class="line-through">R$ 100,00</p>
+                <span class="text-xs bg-[#5EC0BE] text-[#FFFFFF] rounded-sm px-2 py-1">10%OFF</span>
+              </div>
+
+              <p class="text-base font-bold">R$ 79,90</p>
+              <p>Ou em até <span class="font-bold">10x de R$ 7,90</span></p>
+
+              <button class="bg-[#005CFF] text-[#FFFFFF] py-2 px-6 rounded-lg text-sm w-full my-2">
+                Comprar
+              </button>
+            </div>
+            <div
+              class="swiper-slide max-w-44 text-[#303030] border-2 border-[#E7E7EA] rounded-lg p-2 relative"
+              data-nome="Camisa Branca"
+            >
+              <span class="text-xs text-[#FFFFFF] bg-[#00264E] rounded-md p-1 absolute top-1 left-1"
+                >NOVO</span
+              >
+              <img src="./assets/anuncio.svg" alt="produto" />
+              <h3 class="my-2">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h3>
+              <div class="flex items-center gap-3">
+                <p class="line-through">R$ 100,00</p>
+                <span class="text-xs bg-[#5EC0BE] text-[#FFFFFF] rounded-sm px-2 py-1">10%OFF</span>
+              </div>
+
+              <p class="text-base font-bold">R$ 79,90</p>
+              <p>Ou em até <span class="font-bold">10x de R$ 7,90</span></p>
+
+              <button class="bg-[#005CFF] text-[#FFFFFF] py-2 px-6 rounded-lg text-sm w-full my-2">
+                Comprar
+              </button>
+            </div>
+            <div
+              class="swiper-slide max-w-44 text-[#303030] border-2 border-[#E7E7EA] rounded-lg p-2 relative"
+              data-nome="Camisa Branca"
+            >
+              <span class="text-xs text-[#FFFFFF] bg-[#00264E] rounded-md p-1 absolute top-1 left-1"
+                >NOVO</span
+              >
+              <img src="./assets/anuncio.svg" alt="produto" />
+              <h3 class="my-2">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h3>
+              <div class="flex items-center gap-3">
+                <p class="line-through">R$ 100,00</p>
+                <span class="text-xs bg-[#5EC0BE] text-[#FFFFFF] rounded-sm px-2 py-1">10%OFF</span>
+              </div>
+
+              <p class="text-base font-bold">R$ 79,90</p>
+              <p>Ou em até <span class="font-bold">10x de R$ 7,90</span></p>
+
+              <button class="bg-[#005CFF] text-[#FFFFFF] py-2 px-6 rounded-lg text-sm w-full my-2">
+                Comprar
+              </button>
+            </div>
+          </div>
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev">
+            <img src="./assets/seta-swipper.svg" alt="setaprev" />
+          </div>
+          <div class="swiper-button-next">
+            <img src="./assets/seta-swipper.svg" alt="seta next" class="rotate-180" />
+          </div>
+
+          <div class="swiper-pagination-bullets flex justify-center mt-4"></div>
+        </div>
+      </section>
+      <!--SECTION PRODUTO DESTAQUE-->
+      <section class="flex flex-col lg:flex-row lg:items-center lg:px-20 lg:mb-10">
+        <div class="bg-[#C2C2C2] lg:w-1/2 lg:h-auto">
+          <img
+            src="./assets/xicara.png"
+            alt="imagem xicara com o logo avanti"
+            class="w-full mt-14 lg:mt-0 lg:h-full lg:object-cover"
+          />
+        </div>
+        <div class="lg:w-1/2 flex items-center">
+          <div class="text-[#000000] flex flex-col gap-4 mx-6 my-10">
+            <h4 class="text-2xl font-bold">LOREM IPSUM</h4>
+            <p class="text-sm tracking-wider">
+              Duis consectetur metus nec lacus auctor dignissim. Mauris vitae finibus dui. Mauris
+              laoreet lacus ut eleifend viverra. Cras efficitur volutpat dui, in lobortis metus
+              lacinia sit amet. Sed lacinia pharetra magna, vel pulvinar ligula hendrerit a.
+              Maecenas fringilla porttitor tortor eget lacinia. Donec sollicitudin euismod orci,
+              auctor fringilla magna consequat interdum. Fusce sagittis elit a libero commodo
+              egestas efficitur id augue.
+            </p>
+            <p class="text-sm tracking-wider">
+              Duis consectetur metus nec lacus auctor dignissim. Mauris vitae finibus dui. Mauris
+              laoreet lacus ut eleifend viverra. Cras efficitur volutpat dui, in lobortis metus
+              lacinia sit amet. Sed lacinia pharetra magna, vel pulvinar ligula hendrerit a.
+              Maecenas fringilla porttitor tortor eget lacinia. Donec sollicitudin euismod orci,
+              auctor fringilla magna consequat interdum. Fusce sagittis elit a libero commodo
+              egestas efficitur id augue.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- SECTION BANNER -->
+      <section
+        class="flex flex-col bg-[#DEDEDE] px-5 py-7 text-[#000000] mb-14 lg:flew-row lg:flex-row-reverse lg:px-20 lg:items-center lg:gap-11"
+      >
+        <img src="./assets/segundo-banner.png" alt="" class="w-full lg:w-1/2" />
+        <div class="lg:w-1/2">
+          <h4 class="text-xl font-bold text-center my-5 lg:text-3xl">LOREM IPSUM</h4>
+          <div class="flex flex-col gap-5">
+            <div class="flex items-center gap-4">
+              <img
+                src="./assets/pin-localização.svg"
+                alt=""
+                class="w-12 h-12 bg-[#005CFF] rounded-full p-3"
+              />
+              <p class="text-xs lg:text-lg">
+                Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
+                ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
+              </p>
+            </div>
+            <div class="flex items-center gap-4">
+              <img
+                src="./assets/pin-localização.svg"
+                alt=""
+                class="w-12 h-12 bg-[#005CFF] rounded-full p-3"
+              />
+              <p class="text-xs lg:text-lg">
+                Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
+                ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
+              </p>
+            </div>
+            <div class="flex items-center gap-4">
+              <img
+                src="./assets/pin-localização.svg"
+                alt=""
+                class="w-12 h-12 bg-[#005CFF] rounded-full p-3"
+              />
+              <p class="text-xs lg:text-lg">
+                Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
+                ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="flex flex-col lg:flex-row lg:items-center lg:px-20 lg:mb-10">
+        <div class="bg-[#C2C2C2] lg:w-1/2 lg:h-auto">
+          <img
+            src="./assets/xicara.png"
+            alt="imagem xicara com o logo avanti"
+            class="w-full mt-14 lg:mt-0 lg:h-full lg:object-cover"
+          />
+        </div>
+        <div class="lg:w-1/2 flex items-center">
+          <div class="text-[#000000] flex flex-col gap-4 mx-6 my-10">
+            <h4 class="text-2xl font-bold">LOREM IPSUM</h4>
+            <p class="text-sm tracking-wider">
+              Duis consectetur metus nec lacus auctor dignissim. Mauris vitae finibus dui. Mauris
+              laoreet lacus ut eleifend viverra. Cras efficitur volutpat dui, in lobortis metus
+              lacinia sit amet. Sed lacinia pharetra magna, vel pulvinar ligula hendrerit a.
+              Maecenas fringilla porttitor tortor eget lacinia. Donec sollicitudin euismod orci,
+              auctor fringilla magna consequat interdum. Fusce sagittis elit a libero commodo
+              egestas efficitur id augue.
+            </p>
+            <p class="text-sm tracking-wider">
+              Duis consectetur metus nec lacus auctor dignissim. Mauris vitae finibus dui. Mauris
+              laoreet lacus ut eleifend viverra. Cras efficitur volutpat dui, in lobortis metus
+              lacinia sit amet. Sed lacinia pharetra magna, vel pulvinar ligula hendrerit a.
+              Maecenas fringilla porttitor tortor eget lacinia. Donec sollicitudin euismod orci,
+              auctor fringilla magna consequat interdum. Fusce sagittis elit a libero commodo
+              egestas efficitur id augue.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="relative sm:max-h-[660px]">
+        <img src="./assets/rodape.png" alt="" class="w-full sm:h-[660px] object-cover" />
+        <p
+          class="bg-[#005CFF] text-[#FFFFFF] text-base font-semibold text-center px-1 py-4 absolute top-1/2 w-full"
+        >
+          Entre em contato conosco e verifique a disponibilidade para sua região!
+        </p>
+      </section>
     </main>
     <!-- Section newsletter -->
     <section class="my-12 mx-3 lg:mx-10">
-        <h3 class="text-base font-bold text-center lg:mb-2">
-            Cadastre-se na nossa <span class="text-[#005CFF]">newsletter</span>
-        </h3>
-        <form
-            class="bg-[#F5F5F5] rounded-lg p-4 flex flex-col gap-4 lg:flex-row lg:py-16 lg:items-center lg:justify-center">
-            <input type="text" placeholder="Digite seu nome"
-                class="bg-[#FFFFFF] rounded-lg px-6 py-3 text-sm placeholder:text-[#303030] font-normal lg:w-64">
-            <input type="email" placeholder="Digite seu e-mail"
-                class="bg-[#FFFFFF] rounded-lg px-6 py-3 text-sm placeholder:text-[#303030] font-normal lg:w-64">
-            <div>
-                <input type="checkbox" id="privacy">
-                <label for="privacy" class="text-xs">Estou de acordo com a <span class="font-bold">Política de
-                        Privacidade</span></label>
-            </div>
-            <button class=" bg-[#005CFF] text-[#FFFFFF] py-3 rounded-lg text-base font-bold lg:px-6">
-                Cadastrar
-            </button>
-        </form>
+      <h3 class="text-base font-bold text-center lg:mb-2">
+        Cadastre-se na nossa <span class="text-[#005CFF]">newsletter</span>
+      </h3>
+      <form
+        class="bg-[#F5F5F5] rounded-lg p-4 flex flex-col gap-4 lg:flex-row lg:py-16 lg:items-center lg:justify-center"
+      >
+        <input
+          type="text"
+          placeholder="Digite seu nome"
+          class="bg-[#FFFFFF] rounded-lg px-6 py-3 text-sm placeholder:text-[#303030] font-normal lg:w-64"
+        />
+        <input
+          type="email"
+          placeholder="Digite seu e-mail"
+          class="bg-[#FFFFFF] rounded-lg px-6 py-3 text-sm placeholder:text-[#303030] font-normal lg:w-64"
+        />
+        <div>
+          <input type="checkbox" id="privacy" />
+          <label for="privacy" class="text-xs"
+            >Estou de acordo com a <span class="font-bold">Política de Privacidade</span></label
+          >
+        </div>
+        <button class="bg-[#005CFF] text-[#FFFFFF] py-3 rounded-lg text-base font-bold lg:px-6">
+          Cadastrar
+        </button>
+      </form>
     </section>
     <footer>
-        <section class="bg-[#F5F5F5] py-10">
-            <div class="flex flex-col lg:flex-row lg:px-20 lg:items-center lg:justify-center">
-                <div class="flex flex-col items-center">
-                    <img src="./assets/logo-avanti.svg" alt="">
-                    <ul class="flex gap-10 my-10">
-                        <li>
-                            <a href="#"><img src="./assets/logo-instagram.svg" alt="logo instagram"></a>
-                        </li>
-                        <li>
-                            <a href="#"><img src="./assets/logo-facebook.svg" alt="logo facebook"></a>
-                        </li>
-                        <li>
-                            <a href="#"><img src="./assets/logo-youtube.svg" alt="logo youtube"></a>
-                        </li>
-                        <li><a href="#"><img src="./assets/logo-tiktok.svg" alt=""></a></li>
-                    </ul>
-                </div>
-                <div
-                    class="flex flex-col w-full max-w-md mx-auto text-[#303030] lg:flex-row lg:gap-14 lg:justify-center lg:max-w-full">
-                    <!-- Item 1 -->
-                    <div class="border border-[#DDDDDD] lg:border-0">
-                        <button
-                            class="accordion-header flex justify-between items-center w-full p-4 text-left text-lg font-bold">
-                            <h5 class="text-base font-bold lg:text-sm">Institucional</h5>
-                            <span class="arrow lg:hidden"><img src="./assets/arrow.png" alt=""></span>
-                        </button>
-                        <div class="accordion-content hidden p-4 space-y-2 text-xs lg:block lg:pt-0">
-                            <a href="#" class="block">
-                                <h4 class="text-xs">Sobre nós</h4>
-                            </a>
-                            <a href="#" class="block">
-                                <h4 class="text-xs">Nossas Lojas</h4>
-                            </a>
-                            <a href="#" class="block">
-                                <h4 class="text-xs">Privacidade e Segurança</h4>
-                            </a>
-                            <a href="#" class="block">
-                                <h4 class="text-xs">Termos e Condições</h4>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Item 2 -->
-                    <div class="border border-[#DDDDDD] lg:border-0">
-                        <button
-                            class="accordion-header flex justify-between items-center w-full p-4 text-left text-lg font-bold">
-                            <h5 class="text-base font-bold lg:text-sm">Central de ajuda</h5>
-
-                            <span class="arrow lg:hidden"><img src="./assets/arrow.png" alt=""></span>
-                        </button>
-                        <div class="accordion-content hidden p-4 space-y-2 text-xs lg:block lg:pt-0 ">
-                            <a href="#" class="block">
-                                <h4>Fale Conosco</h4>
-                            </a>
-                            <a href="#" class="block">
-                                <h4>Frete e Entrega</h4>
-                            </a>
-                            <a href="#" class="block">
-                                <h4>Trocas e Devoluções</h4>
-                            </a>
-                            <a href="#" class="block">
-                                <h4>Formas de Pagamento</h4>
-                            </a>
-                            <a href="#" class="block">
-                                <h4>FAQ</h4>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Item 3 -->
-                    <div class="border border-[#DDDDDD] lg:border-0">
-                        <button
-                            class="accordion-header flex justify-between items-center w-full p-4 text-left text-lg font-bold">
-                            <h5 class="text-base font-bold  lg:text-sm">Atendimento</h5>
-                            <span class="arrow lg:hidden"><img src="./assets/arrow.png" alt=""></span>
-                        </button>
-                        <div class="accordion-content hidden p-4 space-y-2 text-xs lg:block lg:pt-0">
-                            <h4><span class="font-bold">Telefone:</span>(00) 1234-5678 </h4>
-                            <h4><span class="font-bold"> E-mail:</span> exemplo@exemplo.com.br</h4>
-                            <h4><span class="font-bold">Horário de atendimento:</span></h4>
-                            <p> Segunda a Sábado: 07h00 às 23h00 <br /> Domingos e Feriados: 07h00 às 21h0</p>
-                        </div>
-                    </div>
-                </div>
+      <section class="bg-[#F5F5F5] py-10">
+        <div class="flex flex-col lg:flex-row lg:px-20 lg:items-center lg:justify-center">
+          <div class="flex flex-col items-center">
+            <img src="./assets/logo-avanti.svg" alt="" />
+            <ul class="flex gap-10 my-10">
+              <li>
+                <a href="#"><img src="./assets/logo-instagram.svg" alt="logo instagram" /></a>
+              </li>
+              <li>
+                <a href="#"><img src="./assets/logo-facebook.svg" alt="logo facebook" /></a>
+              </li>
+              <li>
+                <a href="#"><img src="./assets/logo-youtube.svg" alt="logo youtube" /></a>
+              </li>
+              <li>
+                <a href="#"><img src="./assets/logo-tiktok.svg" alt="" /></a>
+              </li>
+            </ul>
+          </div>
+          <div
+            class="flex flex-col w-full max-w-md mx-auto text-[#303030] lg:flex-row lg:gap-14 lg:justify-center lg:max-w-full"
+          >
+            <!-- Item 1 -->
+            <div class="border border-[#DDDDDD] lg:border-0">
+              <button
+                class="accordion-header flex justify-between items-center w-full p-4 text-left text-lg font-bold"
+              >
+                <h5 class="text-base font-bold lg:text-sm">Institucional</h5>
+                <span class="arrow lg:hidden"><img src="./assets/arrow.png" alt="" /></span>
+              </button>
+              <div class="accordion-content hidden p-4 space-y-2 text-xs lg:block lg:pt-0">
+                <a href="#" class="block">
+                  <h4 class="text-xs">Sobre nós</h4>
+                </a>
+                <a href="#" class="block">
+                  <h4 class="text-xs">Nossas Lojas</h4>
+                </a>
+                <a href="#" class="block">
+                  <h4 class="text-xs">Privacidade e Segurança</h4>
+                </a>
+                <a href="#" class="block">
+                  <h4 class="text-xs">Termos e Condições</h4>
+                </a>
+              </div>
             </div>
-            <div class="flex flex-wrap gap-8 py-10 justify-center">
-                <img src="./assets/formas de pgto/amex.svg" alt="">
-                <img src="./assets/formas de pgto/União 32.svg" alt="">
-                <img src="./assets/formas de pgto/visa.svg" alt="">
-                <img src="./assets/formas de pgto/hipercard.svg" alt="">
-                <img src="./assets/formas de pgto/elo.svg" alt="">
-                <img src="./assets/formas de pgto/b.svg" alt="">
-                <img src="./assets/formas de pgto/paypal.svg" alt="">
-                <img src="./assets/formas de pgto/União 39.svg" alt="">
-                <img src="./assets/formas de pgto/boleto.svg" alt="">
+
+            <!-- Item 2 -->
+            <div class="border border-[#DDDDDD] lg:border-0">
+              <button
+                class="accordion-header flex justify-between items-center w-full p-4 text-left text-lg font-bold"
+              >
+                <h5 class="text-base font-bold lg:text-sm">Central de ajuda</h5>
+
+                <span class="arrow lg:hidden"><img src="./assets/arrow.png" alt="" /></span>
+              </button>
+              <div class="accordion-content hidden p-4 space-y-2 text-xs lg:block lg:pt-0">
+                <a href="#" class="block">
+                  <h4>Fale Conosco</h4>
+                </a>
+                <a href="#" class="block">
+                  <h4>Frete e Entrega</h4>
+                </a>
+                <a href="#" class="block">
+                  <h4>Trocas e Devoluções</h4>
+                </a>
+                <a href="#" class="block">
+                  <h4>Formas de Pagamento</h4>
+                </a>
+                <a href="#" class="block">
+                  <h4>FAQ</h4>
+                </a>
+              </div>
             </div>
-            <div class="py-10 px-4 min-h-[100dvh] bg-[#FFFFFF]">
-                <p class="text-xs font-normal mb-10 text-center lg:px-36">Lorem ipsum dolor sit amet, consectetuer
-                    adipiscing
-                    elit,
-                    sed diam
-                    nonummy
-                    nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim
-                    veniam,
-                    quis
-                    nostrud exerci.</p>
-                <ul class="flex flex-wrap justify-center gap-4 sm:gap-6 md:gap-8 lg:gap-12">
-                    <li><img src="./assets/lets-encrypt.svg" alt=""></li>
-                    <li><img src="./assets/vtex-1.svg" alt=""></li>
-                    <li><img src="./assets/avanti.svg" alt=""></li>
-                    <li><img src="./assets/vtex.svg" alt=""></li>
-                </ul>
+
+            <!-- Item 3 -->
+            <div class="border border-[#DDDDDD] lg:border-0">
+              <button
+                class="accordion-header flex justify-between items-center w-full p-4 text-left text-lg font-bold"
+              >
+                <h5 class="text-base font-bold lg:text-sm">Atendimento</h5>
+                <span class="arrow lg:hidden"><img src="./assets/arrow.png" alt="" /></span>
+              </button>
+              <div class="accordion-content hidden p-4 space-y-2 text-xs lg:block lg:pt-0">
+                <h4><span class="font-bold">Telefone:</span>(00) 1234-5678</h4>
+                <h4><span class="font-bold"> E-mail:</span> exemplo@exemplo.com.br</h4>
+                <h4><span class="font-bold">Horário de atendimento:</span></h4>
+                <p>
+                  Segunda a Sábado: 07h00 às 23h00 <br />
+                  Domingos e Feriados: 07h00 às 21h0
+                </p>
+              </div>
             </div>
-        </section>
+          </div>
+        </div>
+        <div class="flex flex-wrap gap-8 py-10 justify-center">
+          <img src="./assets/formas de pgto/amex.svg" alt="" />
+          <img src="./assets/formas de pgto/União 32.svg" alt="" />
+          <img src="./assets/formas de pgto/visa.svg" alt="" />
+          <img src="./assets/formas de pgto/hipercard.svg" alt="" />
+          <img src="./assets/formas de pgto/elo.svg" alt="" />
+          <img src="./assets/formas de pgto/b.svg" alt="" />
+          <img src="./assets/formas de pgto/paypal.svg" alt="" />
+          <img src="./assets/formas de pgto/União 39.svg" alt="" />
+          <img src="./assets/formas de pgto/boleto.svg" alt="" />
+        </div>
+        <div class="py-10 px-4 min-h-[100dvh] bg-[#FFFFFF]">
+          <p class="text-xs font-normal mb-10 text-center lg:px-36">
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
+            tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
+            quis nostrud exerci.
+          </p>
+          <ul class="flex flex-wrap justify-center gap-4 sm:gap-6 md:gap-8 lg:gap-12">
+            <li><img src="./assets/lets-encrypt.svg" alt="" /></li>
+            <li><img src="./assets/vtex-1.svg" alt="" /></li>
+            <li><img src="./assets/avanti.svg" alt="" /></li>
+            <li><img src="./assets/vtex.svg" alt="" /></li>
+          </ul>
+        </div>
+      </section>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src=script.js></script>
-</body>
-
+    <script src="script.js"></script>
+  </body>
 </html>
