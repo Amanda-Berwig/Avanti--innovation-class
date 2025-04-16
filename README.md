@@ -2,9 +2,9 @@
 
 Este projeto foi desenvolvido como parte do **processo seletivo do programa de estágio Innovation Class Tech - Desenvolvimento Front-End**.
 
-🔗 Link do teste técnico: [Processo Seletivo Avanti](https://ic.penseavanti.com.br/mod/page/view.php?id=51)
+🔗 [Acesse o teste técnico](https://ic.penseavanti.com.br/mod/page/view.php?id=51)
 
-🔗Link do projeto no GitHub Pages: [GitHub Pages](https://github.com/Amanda-Berwig/Avanti--innovation-class/deployments/github-pages)
+🔗[Veja o projeto online(GitHub Pages)](https://github.com/Amanda-Berwig/Avanti--innovation-class/deployments/github-pages)
 
 ## 📝 Requisitos para o desenvolvimento
 
@@ -64,7 +64,7 @@ Ao digitar o nome do produto no campo de pesquisa, o carrossel é automaticament
 1. Clone o repositório:
 
 ```bash
-git clone https://github.com/seuusuario/nome-do-projeto.git
+git clone https://github.com/Amanda-Berwig/Avanti--innovation-class.git
 ```
 
 2. Acesse a pasta do projeto:
