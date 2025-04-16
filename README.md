@@ -34,7 +34,7 @@ Este projeto foi desenvolvido como parte do **processo seletivo do programa de e
 
 ![Print Desktop](./assets/print-desktop.png)
 ![Print Desktop](./assets/print-desktop3.png)
-![Print Desktop](./assets/print-funcionalidadehover.png)
+![Demonstração hover](./assets/gifs/Hover-departamentos.gif)
 
 ### 📱 Versão Mobile
 
@@ -42,9 +42,11 @@ Este projeto foi desenvolvido como parte do **processo seletivo do programa de e
 ![Print Mobile](./assets/print-mobile2.png)
 ![Print Mobile](./assets/print-mobile3.png)
 
-### 🔎 Funcionalidade de Busca
+### 🔎 Funcionalidade de Busca Dinâmica
 
-![Print Busca](./assets/print-busca.png)
+Ao digitar o nome do produto no campo de pesquisa, o carrossel é automaticamente atualizado para exibir apenas os itens que correspondem ao termo pesquisado.
+
+![Demonstração Busca](./assets/gifs/resultado-busca.gif)
 
 ---
 
