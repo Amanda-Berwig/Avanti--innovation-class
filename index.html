@@ -62,39 +62,38 @@
     </header>
 
     <!-- MENU NAV -->
-    <nav class="hidden relative shadow p-4 lg:flex items-center gap-6 bg-white z-20">
-        <button id="toggleMenu" class="text-[#000000] font-bold flex items-center gap-2">
+    <nav class="hidden relative shadow p-4 lg:flex items-center gap-6 xl:gap-10 bg-white z-20">
+        <button id="toggleMenu" class="text-[#000000] font-bold flex items-center gap-2 xl:text-base">
             <img src="./assets/menu.svg" alt="menu hamburguer" />
             Todas as Categorias
         </button>
-        <a href="#" class="text-sm hover:text-[#005CFF] hover:font-bold">Feminino</a>
-        <a href="#" class="text-sm hover:text-[#005CFF] hover:font-bold">Masculino</a>
-        <a href="#" class="text-sm hover:text-[#005CFF] hover:font-bold">Infantil</a>
-        <a href="#" class="text-sm hover:text-[#005CFF] hover:font-bold">Acessórios</a>
-        <a href="#" class="text-sm hover:text-[#005CFF] hover:font-bold">Beleza</a>
-        <a href="#" class="text-sm hover:text-[#005CFF] hover:font-bold">Eletrônicos</a>
-        <a href="#" class="text-sm hover:text-[#005CFF] hover:font-bold">Casa</a>
-        <a href="#" class="text-sm hidden xl:inline hover:text-[#005CFF] hover:font-bold">Construção</a>
-        <a href="#" class="text-sm hidden xl:inline hover:text-[#005CFF] hover:font-bold">Esporte</a>
-        <a href="#" class="text-sm hidden xl:inline hover:text-[#005CFF] hover:font-bold">Lazer</a>
-        <a href="#" class="text-sm hidden 2xl:inline hover:text-[#005CFF] hover:font-bold">Saúde</a>
+        <a href="#" class="text-sm xl:text-base hover:text-[#005CFF] hover:font-bold">Feminino</a>
+        <a href="#" class="text-sm xl:text-base hover:text-[#005CFF] hover:font-bold">Masculino</a>
+        <a href="#" class="text-sm xl:text-base hover:text-[#005CFF] hover:font-bold">Infantil</a>
+        <a href="#" class="text-sm xl:text-base hover:text-[#005CFF] hover:font-bold">Acessórios</a>
+        <a href="#" class="text-sm xl:text-base hover:text-[#005CFF] hover:font-bold">Beleza</a>
+        <a href="#" class="text-sm xl:text-base hover:text-[#005CFF] hover:font-bold">Eletrônicos</a>
+        <a href="#" class="text-sm xl:text-base hover:text-[#005CFF] hover:font-bold">Casa</a>
+        <a href="#" class="text-sm xl:text-base hover:text-[#005CFF] hover:font-bold">Construção</a>
+        <a href="#" class="text-sm xl:text-base hover:text-[#005CFF] hover:font-bold">Esporte</a>
+        <a href="#" class="text-sm xl:text-base hover:text-[#005CFF] hover:font-bold">Lazer</a>
+        <a href="#" class="text-sm xl:text-base hover:text-[#005CFF] hover:font-bold">Saúde</a>
     </nav>
 
-
     <!-- MENU DE CATEGORIAS (inicia oculto) -->
-    <div id="menuCategorias" class="hidden bg-[#FFFFFF] absolute p-4 w-full z-10 shadow-lg h-80">
+    <div id="menuCategorias" class="hidden bg-[#FFFFFF] absolute p-4 w-full z-10 shadow-lg h-[420px] xl:h-[450px]">
         <div class="flex">
             <!-- COLUNA DEPARTAMENTOS -->
             <ul class="w-48 border-r pr-4 relative">
                 <li class="group">
                     <a href="#"
-                        class="flex px-4 py-2 font-normal hover:text-[#005CFF] hover:font-bold justify-between items-center">Feminino
+                        class="flex px-4 py-2 font-semibold hover:text-[#005CFF] hover:font-bold justify-between items-center xl:text-base lg:text-base">Feminino
                         <img src="./assets/arrow.png" alt="seta" class="-rotate-90" />
                     </a>
                     <div class="absolute -top-2 left-full ml-8 group-hover:flex hidden p-6 gap-32 z-10">
-                        <div class="text-sm">
-                            <h4 class="text-blue-600 font-bold mb-2">Roupas</h4>
-                            <ul class="text-gray-700 text-sm space-y-3">
+                        <div class="text-sm xl:text-lg">
+                            <h4 class="text-[#005CFF] font-bold mb-2">Roupas</h4>
+                            <ul class="text-[#303030] text-sm xl:text-base xl:text-base space-y-3">
                                 <li><a href="#" class="hover:underline">Vestidos</a></li>
                                 <li><a href="#" class="hover:underline">Blazer</a></li>
                                 <li><a href="#" class="hover:underline">Pijama</a></li>
@@ -104,9 +103,9 @@
                                 <li><a href="#" class="hover:underline">Lingerie</a></li>
                             </ul>
                         </div>
-                        <div class="text-sm">
-                            <h4 class="text-blue-600 font-bold mb-2">Calçados</h4>
-                            <ul class="text-gray-700 text-sm space-y-3">
+                        <div class="text-sm xl:text-lg">
+                            <h4 class="text-[#005CFF] font-bold mb-2">Calçados</h4>
+                            <ul class="text-[#303030] text-sm xl:text-base space-y-3">
                                 <li><a href="#" class="hover:underline">Botas</a></li>
                                 <li><a href="#" class="hover:underline">Tênis</a></li>
                                 <li><a href="#" class="hover:underline">Sandália</a></li>
@@ -116,9 +115,9 @@
                                 <li><a href="#" class="hover:underline">Outros</a></li>
                             </ul>
                         </div>
-                        <div class="text-sm text-nowrap">
-                            <h4 class="text-blue-600 font-bold mb-2">Moda praia</h4>
-                            <ul class="text-gray-700 text-sm space-y-3">
+                        <div class="text-sm xl:text-lg text-nowrap">
+                            <h4 class="text-[#005CFF] font-bold mb-2">Moda praia</h4>
+                            <ul class="text-[#303030] text-sm xl:text-base space-y-3">
                                 <li><a href="#" class="hover:underline">Top</a></li>
                                 <li><a href="#" class="hover:underline">Calcinha</a></li>
                                 <li><a href="#" class="hover:underline">Conjunto biquíni</a></li>
@@ -132,13 +131,13 @@
                 </li>
                 <li class="group">
                     <a href="#"
-                        class="flex px-4 py-2 font-semibold hover:text-[#005CFF] hover:font-bold justify-between items-center">Masculino
+                        class="flex px-4 py-2 font-semibold hover:text-[#005CFF] hover:font-bold justify-between items-center xl:text-base">Masculino
                         <img src="./assets/arrow.png" alt="seta" class="-rotate-90" />
                     </a>
                     <div class="absolute -top-2 left-full ml-8 hidden group-hover:flex p-6 gap-32 z-10">
-                        <div class="text-sm">
-                            <h4 class="text-blue-600 font-bold mb-2">Roupas</h4>
-                            <ul class="text-gray-700 text-sm space-y-3">
+                        <div class="text-sm xl:text-lg">
+                            <h4 class="text-[#005CFF] font-bold mb-2">Roupas</h4>
+                            <ul class="text-[#303030] text-sm xl:text-base space-y-3">
                                 <li><a href="#" class="hover:underline">Camisetas</a></li>
                                 <li><a href="#" class="hover:underline">Blazers</a></li>
                                 <li><a href="#" class="hover:underline">Camisas</a></li>
@@ -148,9 +147,9 @@
                                 <li><a href="#" class="hover:underline">Calças</a></li>
                             </ul>
                         </div>
-                        <div class="text-sm">
-                            <h4 class="text-blue-600 font-bold mb-2">Calçados</h4>
-                            <ul class="text-gray-700 text-sm space-y-3">
+                        <div class="text-sm xl:text-lg">
+                            <h4 class="text-[#005CFF] font-bold mb-2">Calçados</h4>
+                            <ul class="text-[#303030] text-sm xl:text-base space-y-3">
                                 <li><a href="#" class="hover:underline">Tênis</a></li>
                                 <li><a href="#" class="hover:underline">Chinelos</a></li>
                                 <li><a href="#" class="hover:underline">Coturnos</a></li>
@@ -160,9 +159,9 @@
                                 <li><a href="#" class="hover:underline">Chuteiras</a></li>
                             </ul>
                         </div>
-                        <div class="text-sm text-nowrap">
-                            <h4 class="text-blue-600 font-bold mb-2">Moda íntima</h4>
-                            <ul class="text-gray-700 text-sm space-y-3">
+                        <div class="text-sm xl:text-lg text-nowrap">
+                            <h4 class="text-[#005CFF] font-bold mb-2">Moda íntima</h4>
+                            <ul class="text-[#303030] text-sm xl:text-base space-y-3">
                                 <li><a href="#" class="hover:underline">Cuecas</a></li>
                                 <li><a href="#" class="hover:underline">Cuecas boxer</a></li>
                                 <li><a href="#" class="hover:underline">Meias</a></li>
@@ -176,13 +175,13 @@
                 </li>
                 <li class="group">
                     <a href="#"
-                        class="flex px-4 py-2 font-semibold hover:text-[#005CFF] hover:font-bold justify-between items-center">Infantil
+                        class="flex px-4 py-2 font-semibold hover:text-[#005CFF] hover:font-bold justify-between items-center xl:text-base">Infantil
                         <img src="./assets/arrow.png" alt="seta" class="-rotate-90" />
                     </a>
                     <div class="absolute -top-2 left-full ml-8 hidden group-hover:flex p-6 gap-32 z-10">
-                        <div class="text-sm">
-                            <h4 class="text-blue-600 font-bold mb-2">Feminino</h4>
-                            <ul class="text-gray-700 text-sm space-y-3">
+                        <div class="text-sm xl:text-lg">
+                            <h4 class="text-[#005CFF] font-bold mb-2">Feminino</h4>
+                            <ul class="text-[#303030] text-sm xl:text-base space-y-3">
                                 <li><a href="#" class="hover:underline">Shorts</a></li>
                                 <li><a href="#" class="hover:underline">Bodies</a></li>
                                 <li><a href="#" class="hover:underline">Calçados</a></li>
@@ -192,9 +191,9 @@
                                 <li><a href="#" class="hover:underline">Conjuntos</a></li>
                             </ul>
                         </div>
-                        <div class="text-sm">
-                            <h4 class="text-blue-600 font-bold mb-2">Masculino</h4>
-                            <ul class="text-gray-700 text-sm space-y-3">
+                        <div class="text-sm xl:text-lg">
+                            <h4 class="text-[#005CFF] font-bold mb-2">Masculino</h4>
+                            <ul class="text-[#303030] text-sm xl:text-base space-y-3">
                                 <li><a href="#" class="hover:underline">Bermudas</a></li>
                                 <li><a href="#" class="hover:underline">Bodies</a></li>
                                 <li><a href="#" class="hover:underline">Calçados</a></li>
@@ -204,9 +203,9 @@
                                 <li><a href="#" class="hover:underline">Conjuntos</a></li>
                             </ul>
                         </div>
-                        <div class="text-sm">
-                            <h4 class="text-blue-600 font-bold mb-2">Outros</h4>
-                            <ul class="text-gray-700 text-sm space-y-3">
+                        <div class="text-sm xl:text-lg">
+                            <h4 class="text-[#005CFF] font-bold mb-2">Outros</h4>
+                            <ul class="text-[#303030] text-sm xl:text-base space-y-3">
                                 <li><a href="#" class="hover:underline">Pijamas</a></li>
                                 <li><a href="#" class="hover:underline">Moda íntima</a></li>
                                 <li><a href="#" class="hover:underline">Perfumaria</a></li>
@@ -220,13 +219,13 @@
                 </li>
                 <li class="group">
                     <a href="#"
-                        class="flex px-4 py-2 font-semibold hover:text-[#005CFF] hover:font-bold justify-between items-center">Acessórios
+                        class="flex px-4 py-2 font-semibold hover:text-[#005CFF] hover:font-bold justify-between items-center xl:text-base">Acessórios
                         <img src="./assets/arrow.png" alt="seta" class="-rotate-90" />
                     </a>
                     <div class="absolute -top-2 left-full ml-8 hidden group-hover:flex p-6 gap-32 z-10">
-                        <div class="text-sm">
-                            <h4 class="text-blue-600 font-bold mb-2">Cabelo</h4>
-                            <ul class="text-gray-700 text-sm space-y-3">
+                        <div class="text-sm xl:text-lg">
+                            <h4 class="text-[#005CFF] font-bold mb-2">Cabelo</h4>
+                            <ul class="text-[#303030] text-sm xl:text-base space-y-3">
                                 <li><a href="#" class="hover:underline">Tiaras</a></li>
                                 <li><a href="#" class="hover:underline">Escovas</a></li>
                                 <li><a href="#" class="hover:underline">Prendendor</a></li>
@@ -236,9 +235,9 @@
                                 <li><a href="#" class="hover:underline">Conjuntos</a></li>
                             </ul>
                         </div>
-                        <div class="text-sm text-nowrap">
-                            <h4 class="text-blue-600 font-bold mb-2">Joias e Bijuterias</h4>
-                            <ul class="text-gray-700 text-sm space-y-3">
+                        <div class="text-sm xl:text-lg text-nowrap">
+                            <h4 class="text-[#005CFF] font-bold mb-2">Joias e Bijuterias</h4>
+                            <ul class="text-[#303030] text-sm xl:text-base space-y-3">
                                 <li><a href="#" class="hover:underline">Colares</a></li>
                                 <li><a href="#" class="hover:underline">Aneis</a></li>
                                 <li><a href="#" class="hover:underline">Braceletes</a></li>
@@ -248,9 +247,9 @@
 
                             </ul>
                         </div>
-                        <div class="text-sm">
-                            <h4 class="text-blue-600 font-bold mb-2">Diversos</h4>
-                            <ul class="text-gray-700 text-sm space-y-3">
+                        <div class="text-sm xl:text-lg">
+                            <h4 class="text-[#005CFF] font-bold mb-2">Diversos</h4>
+                            <ul class="text-[#303030] text-sm xl:text-base space-y-3">
                                 <li><a href="#" class="hover:underline">Lenços</a></li>
                                 <li><a href="#" class="hover:underline">Óculos</a></li>
                                 <li><a href="#" class="hover:underline">Cintos</a></li>
@@ -264,13 +263,13 @@
                 </li>
                 <li class="group">
                     <a href="#"
-                        class="flex px-4 py-2 font-semibold hover:text-[#005CFF] hover:font-bold justify-between items-center">Beleza
+                        class="flex px-4 py-2 font-semibold hover:text-[#005CFF] hover:font-bold justify-between items-center xl:text-base">Beleza
                         <img src="./assets/arrow.png" alt="seta" class="-rotate-90" />
                     </a>
                     <div class="absolute -top-2 left-full ml-8 hidden group-hover:flex p-6 gap-32 z-10">
-                        <div class="text-sm">
-                            <h4 class="text-blue-600 font-bold mb-2">Makes</h4>
-                            <ul class="text-gray-700 text-sm space-y-3">
+                        <div class="text-sm xl:text-lg">
+                            <h4 class="text-[#005CFF] font-bold mb-2">Makes</h4>
+                            <ul class="text-[#303030] text-sm xl:text-base space-y-3">
                                 <li><a href="#" class="hover:underline">Corretivos</a></li>
                                 <li><a href="#" class="hover:underline">Iluminador</a></li>
                                 <li><a href="#" class="hover:underline">Pó solto</a></li>
@@ -280,9 +279,9 @@
                                 <li><a href="#" class="hover:underline">Primers</a></li>
                             </ul>
                         </div>
-                        <div class="text-sm text-nowrap">
-                            <h4 class="text-blue-600 font-bold mb-2">Skincare</h4>
-                            <ul class="text-gray-700 text-sm space-y-3">
+                        <div class="text-sm xl:text-lg text-nowrap">
+                            <h4 class="text-[#005CFF] font-bold mb-2">Skincare</h4>
+                            <ul class="text-[#303030] text-sm xl:text-base space-y-3">
                                 <li><a href="#" class="hover:underline">Gel de limpeza</a></li>
                                 <li><a href="#" class="hover:underline">Hidratante labial</a></li>
                                 <li><a href="#" class="hover:underline">Hidratante facial</a></li>
@@ -292,9 +291,9 @@
                                 <li><a href="#" class="hover:underline">Protetor Solar</a></li>
                             </ul>
                         </div>
-                        <div class="text-sm text-nowrap">
-                            <h4 class="text-blue-600 font-bold mb-2">Capilar</h4>
-                            <ul class="text-gray-700 text-sm space-y-3">
+                        <div class="text-sm xl:text-lg text-nowrap">
+                            <h4 class="text-[#005CFF] font-bold mb-2">Capilar</h4>
+                            <ul class="text-[#303030] text-sm xl:text-base space-y-3">
                                 <li><a href="#" class="hover:underline">Creme capilar</a></li>
                                 <li><a href="#" class="hover:underline">Spray antifrizz</a></li>
                                 <li><a href="#" class="hover:underline">Shampoo</a></li>
@@ -308,13 +307,13 @@
                 </li>
                 <li class="group">
                     <a href="#"
-                        class="flex px-4 py-2 font-semibold hover:text-[#005CFF] hover:font-bold justify-between items-center">Eletrônicos
+                        class="flex px-4 py-2 font-semibold hover:text-[#005CFF] hover:font-bold justify-between items-center xl:text-base">Eletrônicos
                         <img src="./assets/arrow.png" alt="seta" class="-rotate-90" />
                     </a>
                     <div class="absolute -top-2 left-full ml-8 hidden group-hover:flex p-6 gap-32 z-10">
-                        <div class="text-sm">
-                            <h4 class="text-blue-600 font-bold mb-2">Computadores</h4>
-                            <ul class="text-gray-700 text-sm space-y-3">
+                        <div class="text-sm xl:text-lg">
+                            <h4 class="text-[#005CFF] font-bold mb-2">Computadores</h4>
+                            <ul class="text-[#303030] text-sm xl:text-base space-y-3">
                                 <li><a href="#" class="hover:underline">Notebooks</a></li>
                                 <li><a href="#" class="hover:underline">Desktops</a></li>
                                 <li><a href="#" class="hover:underline">Monitores</a></li>
@@ -324,9 +323,9 @@
                                 <li><a href="#" class="hover:underline">Acessórios</a></li>
                             </ul>
                         </div>
-                        <div class="text-sm">
-                            <h4 class="text-blue-600 font-bold mb-2">Smartphones</h4>
-                            <ul class="text-gray-700 text-sm space-y-3">
+                        <div class="text-sm xl:text-lg">
+                            <h4 class="text-[#005CFF] font-bold mb-2">Smartphones</h4>
+                            <ul class="text-[#303030] text-sm xl:text-base space-y-3">
                                 <li><a href="#" class="hover:underline">Celulares</a></li>
                                 <li><a href="#" class="hover:underline">Capas</a></li>
                                 <li><a href="#" class="hover:underline">Películas</a></li>
@@ -336,9 +335,9 @@
                                 <li><a href="#" class="hover:underline">Acessórios</a></li>
                             </ul>
                         </div>
-                        <div class="text-sm text-nowrap">
-                            <h4 class="text-blue-600 font-bold mb-2">Áudio e Vídeo</h4>
-                            <ul class="text-gray-700 text-sm space-y-3">
+                        <div class="text-sm xl:text-lg text-nowrap">
+                            <h4 class="text-[#005CFF] font-bold mb-2">Áudio e Vídeo</h4>
+                            <ul class="text-[#303030] text-sm xl:text-base space-y-3">
                                 <li><a href="#" class="hover:underline">TVs</a></li>
                                 <li><a href="#" class="hover:underline">Caixas de Som</a></li>
                                 <li><a href="#" class="hover:underline">Headphones</a></li>
@@ -352,13 +351,13 @@
                 </li>
                 <li class="group">
                     <a href="#"
-                        class="flex px-4 py-2 font-semibold hover:text-[#005CFF] hover:font-bold justify-between items-center">Casa
+                        class="flex px-4 py-2 font-semibold hover:text-[#005CFF] hover:font-bold justify-between items-center xl:text-base">Casa
                         <img src="./assets/arrow.png" alt="seta" class="-rotate-90" />
                     </a>
                     <div class="absolute -top-2 left-full ml-8 hidden group-hover:flex p-6 gap-32 z-10">
-                        <div class="text-sm">
-                            <h4 class="text-blue-600 font-bold mb-2">Cozinha</h4>
-                            <ul class="text-gray-700 text-sm space-y-3">
+                        <div class="text-sm xl:text-lg">
+                            <h4 class="text-[#005CFF] font-bold mb-2">Cozinha</h4>
+                            <ul class="text-[#303030] text-sm xl:text-base space-y-3">
                                 <li><a href="#" class="hover:underline">Panelas</a></li>
                                 <li><a href="#" class="hover:underline">Utensílios</a></li>
                                 <li><a href="#" class="hover:underline">Eletrodomésticos</a></li>
@@ -368,9 +367,9 @@
                                 <li><a href="#" class="hover:underline">Organização</a></li>
                             </ul>
                         </div>
-                        <div class="text-sm">
-                            <h4 class="text-blue-600 font-bold mb-2">Decoração</h4>
-                            <ul class="text-gray-700 text-sm space-y-3">
+                        <div class="text-sm xl:text-lg">
+                            <h4 class="text-[#005CFF] font-bold mb-2">Decoração</h4>
+                            <ul class="text-[#303030] text-sm xl:text-base space-y-3">
                                 <li><a href="#" class="hover:underline">Quadros</a></li>
                                 <li><a href="#" class="hover:underline">Almofadas</a></li>
                                 <li><a href="#" class="hover:underline">Tapetes</a></li>
@@ -380,9 +379,9 @@
                                 <li><a href="#" class="hover:underline">Espelhos</a></li>
                             </ul>
                         </div>
-                        <div class="text-sm">
-                            <h4 class="text-blue-600 font-bold mb-2">Móveis</h4>
-                            <ul class="text-gray-700 text-sm space-y-3">
+                        <div class="text-sm xl:text-lg">
+                            <h4 class="text-[#005CFF] font-bold mb-2">Móveis</h4>
+                            <ul class="text-[#303030] text-sm xl:text-base space-y-3">
                                 <li><a href="#" class="hover:underline">Sofás</a></li>
                                 <li><a href="#" class="hover:underline">Mesas</a></li>
                                 <li><a href="#" class="hover:underline">Cadeiras</a></li>
@@ -396,13 +395,13 @@
                 </li>
                 <li class="group">
                     <a href="#"
-                        class="flex px-4 py-2 font-semibold hover:text-[#005CFF] hover:font-bold justify-between items-center">Construção
+                        class="flex px-4 py-2 font-semibold hover:text-[#005CFF] hover:font-bold justify-between items-center xl:text-base">Construção
                         <img src="./assets/arrow.png" alt="seta" class="-rotate-90" />
                     </a>
                     <div class="absolute -top-2 left-full ml-8 hidden group-hover:flex p-6 gap-32 z-10">
-                        <div class="text-sm">
-                            <h4 class="text-blue-600 font-bold mb-2">Ferramentas</h4>
-                            <ul class="text-gray-700 text-sm space-y-3">
+                        <div class="text-sm xl:text-lg">
+                            <h4 class="text-[#005CFF] font-bold mb-2">Ferramentas</h4>
+                            <ul class="text-[#303030] text-sm xl:text-base space-y-3">
                                 <li><a href="#" class="hover:underline">Elétricas</a></li>
                                 <li><a href="#" class="hover:underline">Manuais</a></li>
                                 <li><a href="#" class="hover:underline">Kits</a></li>
@@ -412,9 +411,9 @@
                                 <li><a href="#" class="hover:underline">Acessórios</a></li>
                             </ul>
                         </div>
-                        <div class="text-sm">
-                            <h4 class="text-blue-600 font-bold mb-2">Materiais</h4>
-                            <ul class="text-gray-700 text-sm space-y-3">
+                        <div class="text-sm xl:text-lg">
+                            <h4 class="text-[#005CFF] font-bold mb-2">Materiais</h4>
+                            <ul class="text-[#303030] text-sm xl:text-base space-y-3">
                                 <li><a href="#" class="hover:underline">Tintas</a></li>
                                 <li><a href="#" class="hover:underline">Madeiras</a></li>
                                 <li><a href="#" class="hover:underline">Elétricos</a></li>
@@ -424,9 +423,9 @@
                                 <li><a href="#" class="hover:underline">Cimentos</a></li>
                             </ul>
                         </div>
-                        <div class="text-sm">
-                            <h4 class="text-blue-600 font-bold mb-2">Segurança</h4>
-                            <ul class="text-gray-700 text-sm space-y-3">
+                        <div class="text-sm xl:text-lg">
+                            <h4 class="text-[#005CFF] font-bold mb-2">Segurança</h4>
+                            <ul class="text-[#303030] text-sm xl:text-base space-y-3">
                                 <li><a href="#" class="hover:underline">Capacetes</a></li>
                                 <li><a href="#" class="hover:underline">Lucas</a></li>
                                 <li><a href="#" class="hover:underline">Óculos</a></li>
@@ -434,6 +433,138 @@
                                 <li><a href="#" class="hover:underline">Máscaras</a></li>
                                 <li><a href="#" class="hover:underline">Protetores</a></li>
                                 <li><a href="#" class="hover:underline">Uniformes</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="group">
+                    <a href="#"
+                        class="flex px-4 py-2 font-semibold hover:text-[#005CFF] hover:font-bold justify-between items-center xl:text-base">Esporte
+                        <img src="./assets/arrow.png" alt="seta" class="-rotate-90" />
+                    </a>
+                    <div class="absolute -top-2 left-full ml-8 hidden group-hover:flex p-6 gap-32 z-10">
+                        <div class="text-sm xl:text-lg">
+                            <h4 class="text-[#005CFF] font-bold mb-2">Equipamentos</h4>
+                            <ul class="text-[#303030] text-sm xl:text-base space-y-3">
+                                <li><a href="#" class="hover:underline">Bolas</a></li>
+                                <li><a href="#" class="hover:underline">Raquetes</a></li>
+                                <li><a href="#" class="hover:underline">Redes</a></li>
+                                <li><a href="#" class="hover:underline">Luvas</a></li>
+                                <li><a href="#" class="hover:underline">Capacetes</a></li>
+                                <li><a href="#" class="hover:underline">Pesos</a></li>
+                                <li><a href="#" class="hover:underline">Tapetes</a></li>
+                            </ul>
+                        </div>
+                        <div class="text-sm xl:text-lg text-nowrap">
+                            <h4 class="text-[#005CFF] font-bold mb-2">Roupas Esportivas</h4>
+                            <ul class="text-[#303030] text-sm xl:text-base space-y-3">
+                                <li><a href="#" class="hover:underline">Camisetas</a></li>
+                                <li><a href="#" class="hover:underline">Shorts</a></li>
+                                <li><a href="#" class="hover:underline">Calças</a></li>
+                                <li><a href="#" class="hover:underline">Tops</a></li>
+                                <li><a href="#" class="hover:underline">Jaquetas</a></li>
+                                <li><a href="#" class="hover:underline">Meias</a></li>
+                                <li><a href="#" class="hover:underline">Acessórios</a></li>
+                            </ul>
+                        </div>
+                        <div class="text-sm xl:text-lg text-nowrap">
+                            <h4 class="text-[#005CFF] font-bold mb-2">Calçados</h4>
+                            <ul class="text-[#303030] text-sm xl:text-base space-y-3">
+                                <li><a href="#" class="hover:underline">Tênis de Corrida</a></li>
+                                <li><a href="#" class="hover:underline">Chuteiras</a></li>
+                                <li><a href="#" class="hover:underline">Tênis Casuais</a></li>
+                                <li><a href="#" class="hover:underline">Sandálias</a></li>
+                                <li><a href="#" class="hover:underline">Botas de Trilha</a></li>
+                                <li><a href="#" class="hover:underline">Slides</a></li>
+                                <li><a href="#" class="hover:underline">Palmilhas</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="group">
+                    <a href="#"
+                        class="flex px-4 py-2 font-semibold hover:text-[#005CFF] hover:font-bold justify-between items-center xl:text-base">Lazer
+                        <img src="./assets/arrow.png" alt="seta" class="-rotate-90" />
+                    </a>
+                    <div class="absolute -top-2 left-full ml-8 hidden group-hover:flex p-6 gap-32 z-10">
+                        <div class="text-sm xl:text-lg text-nowrap">
+                            <h4 class="text-[#005CFF] font-bold mb-2">Entretenimento</h4>
+                            <ul class="text-[#303030] text-sm xl:text-base space-y-3">
+                                <li><a href="#" class="hover:underline">Jogos de Tabuleiro</a></li>
+                                <li><a href="#" class="hover:underline">Quebra-Cabeças</a></li>
+                                <li><a href="#" class="hover:underline">Cartas</a></li>
+                                <li><a href="#" class="hover:underline">Livros</a></li>
+                                <li><a href="#" class="hover:underline">Filmes e Séries</a></li>
+                                <li><a href="#" class="hover:underline">Brinquedos Adultos</a></li>
+                                <li><a href="#" class="hover:underline">Videogames</a></li>
+                            </ul>
+                        </div>
+                        <div class="text-sm xl:text-lg text-nowrap">
+                            <h4 class="text-[#005CFF] font-bold mb-2">Ao Ar Livre</h4>
+                            <ul class="text-[#303030] text-sm xl:text-base space-y-3">
+                                <li><a href="#" class="hover:underline">Camping</a></li>
+                                <li><a href="#" class="hover:underline">Churrasqueiras</a></li>
+                                <li><a href="#" class="hover:underline">Piscinas</a></li>
+                                <li><a href="#" class="hover:underline">Caiaques</a></li>
+                                <li><a href="#" class="hover:underline">Bicicletas</a></li>
+                                <li><a href="#" class="hover:underline">Patinetes</a></li>
+                                <li><a href="#" class="hover:underline">Redes</a></li>
+                            </ul>
+                        </div>
+                        <div class="text-sm xl:text-lg text-nowrap">
+                            <h4 class="text-[#005CFF] font-bold mb-2">Tecnologia para Lazer</h4>
+                            <ul class="text-[#303030] text-sm xl:text-base space-y-3">
+                                <li><a href="#" class="hover:underline">Caixas de Som</a></li>
+                                <li><a href="#" class="hover:underline">Fones de Ouvido</a></li>
+                                <li><a href="#" class="hover:underline">Projetores</a></li>
+                                <li><a href="#" class="hover:underline">Smart TVs</a></li>
+                                <li><a href="#" class="hover:underline">Drones</a></li>
+                                <li><a href="#" class="hover:underline">Câmeras de Ação</a></li>
+                                <li><a href="#" class="hover:underline">Acessórios Gamer</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li class="group">
+                    <a href="#"
+                        class="flex px-4 py-2 font-semibold hover:text-[#005CFF] hover:font-bold justify-between items-center xl:text-base">Saúde
+                        <img src="./assets/arrow.png" alt="seta" class="-rotate-90" />
+                    </a>
+                    <div class="absolute -top-2 left-full ml-8 hidden group-hover:flex p-6 gap-32 z-10">
+                        <div class="text-sm xl:text-lg text-nowrap">
+                            <h4 class="text-[#005CFF] font-bold mb-2">Cuidados Pessoais</h4>
+                            <ul class="text-[#303030] text-sm xl:text-base space-y-3">
+                                <li><a href="#" class="hover:underline">Higiene Bucal</a></li>
+                                <li><a href="#" class="hover:underline">Cuidados com a Pele</a></li>
+                                <li><a href="#" class="hover:underline">Cabelos</a></li>
+                                <li><a href="#" class="hover:underline">Depilação</a></li>
+                                <li><a href="#" class="hover:underline">Desodorantes</a></li>
+                                <li><a href="#" class="hover:underline">Sabonetes</a></li>
+                                <li><a href="#" class="hover:underline">Hidratantes</a></li>
+                            </ul>
+                        </div>
+                        <div class="text-sm xl:text-lg">
+                            <h4 class="text-[#005CFF] font-bold mb-2">Medicamentos</h4>
+                            <ul class="text-[#303030] text-sm xl:text-base space-y-3">
+                                <li><a href="#" class="hover:underline">Analgésicos</a></li>
+                                <li><a href="#" class="hover:underline">Antitérmicos</a></li>
+                                <li><a href="#" class="hover:underline">Antialérgicos</a></li>
+                                <li><a href="#" class="hover:underline">Vitaminas</a></li>
+                                <li><a href="#" class="hover:underline">Suplementos</a></li>
+                                <li><a href="#" class="hover:underline">Pomadas</a></li>
+                                <li><a href="#" class="hover:underline">Fitoterápicos</a></li>
+                            </ul>
+                        </div>
+                        <div class="text-sm xl:text-lg text-nowrap">
+                            <h4 class="text-[#005CFF] font-bold mb-2">Equipamentos de Saúde</h4>
+                            <ul class="text-[#303030] text-sm xl:text-base space-y-3">
+                                <li><a href="#" class="hover:underline">Termômetros</a></li>
+                                <li><a href="#" class="hover:underline">Aparelhos de Pressão</a></li>
+                                <li><a href="#" class="hover:underline">Oxímetros</a></li>
+                                <li><a href="#" class="hover:underline">Massageadores</a></li>
+                                <li><a href="#" class="hover:underline">Balanças</a></li>
+                                <li><a href="#" class="hover:underline">Inaladores</a></li>
+                                <li><a href="#" class="hover:underline">Colchões Ortopédicos</a></li>
                             </ul>
                         </div>
                     </div>
@@ -785,16 +916,20 @@
                     <img src="./assets/logo-avanti.svg" alt="" />
                     <ul class="flex gap-10 my-10">
                         <li>
-                            <a href="#"><img src="./assets/logo-instagram.svg" alt="logo instagram" /></a>
+                            <a href="#"><img src="./assets/logo-instagram.svg" alt="logo instagram"
+                                    class="lg:w-6 lg:h-6" /></a>
                         </li>
                         <li>
-                            <a href="#"><img src="./assets/logo-facebook.svg" alt="logo facebook" /></a>
+                            <a href="#"><img src="./assets/logo-facebook.svg" alt="logo facebook"
+                                    class="lg:w-6 lg:h-6" /></a>
                         </li>
                         <li>
-                            <a href="#"><img src="./assets/logo-youtube.svg" alt="logo youtube" /></a>
+                            <a href="#"><img src="./assets/logo-youtube.svg" alt="logo youtube"
+                                    class="lg:w-6 lg:h-6" /></a>
                         </li>
                         <li>
-                            <a href="#"><img src="./assets/logo-tiktok.svg" alt="" /></a>
+                            <a href="#"><img src="./assets/logo-tiktok.svg" alt="logo tiktok"
+                                    class="lg:w-6 lg:h-6" /></a>
                         </li>
                     </ul>
                 </div>

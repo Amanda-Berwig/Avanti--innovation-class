@@ -4,6 +4,8 @@ Este projeto foi desenvolvido como parte do **processo seletivo do programa de e
 
 🔗 Link do teste técnico: [Processo Seletivo Avanti](https://ic.penseavanti.com.br/mod/page/view.php?id=51)
 
+🔗Link do projeto no GitHub Pages: [GitHub Pages](https://github.com/Amanda-Berwig/Avanti--innovation-class/deployments/github-pages)
+
 ## 📝 Requisitos para o desenvolvimento
 
 ✅ **1. Estruturação HTML**
@@ -32,6 +34,7 @@ Este projeto foi desenvolvido como parte do **processo seletivo do programa de e
 
 ![Print Desktop](./assets/print-desktop.png)
 ![Print Desktop](./assets/print-desktop3.png)
+![Print Desktop](./assets/print-funcionalidadehover.png)
 
 ### 📱 Versão Mobile
 
