@@ -52,6 +52,7 @@ document.querySelectorAll('.accordion-header').forEach(button => {
 
 const toggleBtn = document.getElementById('toggleMenu');
 const menuCategorias = document.getElementById('menuCategorias');
+const listCategorias = document.getElementById('listCat');
 
 const navLinks = document.querySelectorAll('nav a');
 const departamentos = menuCategorias.querySelectorAll('ul > li'); // todos os li de categorias
