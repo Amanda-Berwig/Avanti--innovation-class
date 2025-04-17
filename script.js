@@ -62,7 +62,6 @@ navLinks.forEach(link => {
   link.addEventListener('mouseenter', () => {
     const nomeDepto = link.textContent.trim().toLowerCase();
 
-    // Mostra o menu de categorias
     menuCategorias.classList.remove('hidden');
 
     // Mostra somente o departamento correspondente
@@ -78,16 +77,13 @@ navLinks.forEach(link => {
   });
 });
 
-// Show menu on click (keeping the original click functionality)
 toggleBtn.addEventListener('click', () => {
   menuCategorias.classList.toggle('hidden');
 });
 
 //////
 const closeMenuCategorias = e => {
-  // Small delay to allow moving to the menu
   setTimeout(() => {
-    // Check if neither element is being hovered
     if (!menuCategorias.matches(':hover') && !toggleBtn.matches(':hover')) {
       menuCategorias.classList.add('hidden');
     }
@@ -95,7 +91,6 @@ const closeMenuCategorias = e => {
 };
 
 // Hide menu when mouse leaves both elements
-toggleBtn.addEventListener('mouseleave', closeMenuCategorias);
 toggleBtn.addEventListener('mouseleave', closeMenuCategorias);
 
 menuCategorias.addEventListener('mouseleave', e => {
