@@ -99,27 +99,15 @@ function mostrarDepartamento(nomeDepto) {
   });
 }
 
-// Adicione este estilo ao seu documento para forçar o submenu a aparecer
+//força o submenu a aparecer
 document.addEventListener('DOMContentLoaded', function () {
   const style = document.createElement('style');
   style.textContent = `
-    .force-hover > div {
-      display: flex !important;
-    }
-    
     /* Garantir que os elementos dentro do submenu sejam visíveis */
     .force-hover > div * {
       display: revert !important;
     }
-    
-    /* Estilo para os itens do submenu */
-    .force-hover > div ul {
-      display: block !important;
-    }
-    
-    .force-hover > div li {
-      display: list-item !important;
-    }
+   
   `;
   document.head.appendChild(style);
 
@@ -192,16 +180,6 @@ menuCategorias.addEventListener('mouseleave', function () {
   resetSubmenus();
 });
 
-// Fechar o menu se clicar fora dele
-document.addEventListener('click', e => {
-  const isClickInside =
-    toggleBtn.contains(e.target) ||
-    menuCategorias.contains(e.target) ||
-    Array.from(navLinks).some(link => link.contains(e.target));
-  if (!isClickInside) {
-    menuCategorias.classList.add('hidden');
-  }
-});
 ///// funcionalidade busca
 function buscar() {
   const termoBusca = document.getElementById('campoBusca').value.trim().toLowerCase();
