@@ -1,4 +1,4 @@
-# Projeto - Processo Seletivo Avanti 🚀
+# Projeto - Processo Seletivo Avanti
 
 Este projeto foi desenvolvido como parte do **processo seletivo do programa de estágio Innovation Class Tech - Desenvolvimento Front-End**.
 
@@ -11,7 +11,8 @@ Este projeto foi desenvolvido como parte do **processo seletivo do programa de e
 ✅ **1. Estruturação HTML**
 
 - O layout foi seguido conforme o Figma proposto pela empresa.
-  🖼️ Link do Figma: [Acessar o Layout no Figma](https://www.figma.com/proto/DqtFxC6312M32mLt8FpJjq/innovation-class?page-id=13%3A673&node-id=13-920&viewport=346%2C140%2C0.11&t=HyGGDSs83f1vbqMJ-1&scaling=scale-down&content-scaling=fixed)
+
+  [Acessar o Layout no Figma](https://www.figma.com/proto/DqtFxC6312M32mLt8FpJjq/innovation-class?page-id=13%3A673&node-id=13-920&viewport=346%2C140%2C0.11&t=HyGGDSs83f1vbqMJ-1&scaling=scale-down&content-scaling=fixed)
 
 ✅ **2. Estilização com CSS (Responsivo)**
 
@@ -28,7 +29,7 @@ Este projeto foi desenvolvido como parte do **processo seletivo do programa de e
 
 ---
 
-## 📸 Prints do Projeto
+## Prints do Projeto
 
 ### 💻 Versão Desktop
 
@@ -50,7 +51,7 @@ Ao digitar o nome do produto no campo de pesquisa, o carrossel é automaticament
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 - HTML5
 - Tailwind CSS

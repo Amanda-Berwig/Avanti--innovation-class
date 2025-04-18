@@ -1,3 +1,4 @@
+// SWIPER JS
 const swiper = new Swiper('.swiper', {
   direction: 'horizontal',
   loop: true,
@@ -24,14 +25,13 @@ const swiper = new Swiper('.swiper', {
       spaceBetween: 15,
     },
   },
-  // If we need pagination
+
   pagination: {
     el: '.swiper-pagination-bullets',
     typeof: 'bullets',
     clickable: true,
   },
 
-  // Navigation arrows
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
@@ -48,7 +48,7 @@ document.querySelectorAll('.accordion-header').forEach(button => {
   });
 });
 
-////
+//// MENU NAVEGAÇÃO
 
 const toggleBtn = document.getElementById('toggleMenu');
 const menuCategorias = document.getElementById('menuCategorias');
@@ -56,13 +56,10 @@ const menuCategorias = document.getElementById('menuCategorias');
 const navLinks = document.querySelectorAll('nav a:not(#toggleMenu)'); // Todos os links exceto o botão de categorias
 const departamentos = menuCategorias.querySelectorAll('ul > li'); // todos os li de categorias
 
-////////
-
 // Função para mostrar o departamento específico
 function mostrarDepartamento(nomeDepto) {
   menuCategorias.classList.remove('hidden');
 
-  // Verifica se é o botão principal - nesse caso, mostra todos os departamentos
   if (nomeDepto === 'todas as categorias') {
     departamentos.forEach(li => {
       li.classList.remove('hidden');
@@ -76,13 +73,12 @@ function mostrarDepartamento(nomeDepto) {
     const textoLi = li.querySelector('a').textContent.trim().toLowerCase();
 
     if (textoLi === nomeDepto) {
-      // Mostra a categoria correspondente
       li.classList.remove('hidden');
 
       // Força o submenu a aparecer explicitamente
       const submenu = li.querySelector('div');
       if (submenu) {
-        submenu.style.display = 'flex'; // Define display:flex diretamente
+        submenu.style.display = 'flex';
         li.classList.add('force-hover');
       }
     } else {
@@ -143,11 +139,6 @@ toggleBtn.addEventListener('click', () => {
   }
 });
 
-// Quando o mouse passar sobre o botão Todas as Categorias
-toggleBtn.addEventListener('mouseenter', () => {
-  mostrarDepartamento('todas as categorias');
-});
-
 // Função para fechar o menu com um pequeno delay
 function closeMenuCategorias() {
   setTimeout(() => {
@@ -180,7 +171,7 @@ menuCategorias.addEventListener('mouseleave', function () {
   resetSubmenus();
 });
 
-///// funcionalidade busca
+///// Busca dinâmica
 function buscar() {
   const termoBusca = document.getElementById('campoBusca').value.trim().toLowerCase();
   const resultado = document.getElementById('resultadoBusca');
@@ -211,5 +202,5 @@ function buscar() {
     resultado.textContent += ' (Nenhum produto encontrado)';
   }
 
-  swiper.update(); // atualiza o swiper com os itens visíveis
+  swiper.update();
 }
